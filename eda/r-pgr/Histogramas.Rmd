@@ -1,0 +1,89 @@
+---
+title: "Histogramas"
+author: "Marcus Seabra"
+date: "15 de março de 2019"
+output: html_document
+---
+
+Histogramas permitem visualizar a distribuição de um conjunto de dados (dataset).
+
+```{r}
+setwd('/home/seabra/dev/dsjourney/eda/data')
+
+# Carregando os dados na variável player
+players <- read.csv("nba-players.csv", stringsAsFactors=FALSE)
+
+# O comando names fornece as variáreis existentes no dataset
+names(players)
+
+```
+
+```{r}
+# Exibe a estrutura do objeto
+str(players)
+```
+
+```{r}
+summary(players)
+```
+
+Um gráfico de barras é similar a um histograma, mas há diferenças fundamentais. A principal delas é que o primeiro exibe informações sobre categorias de um conjunto. Um histograma, por outro lado, exibe a distribuição de uma variável contínua.
+
+Vamos gerar um gráfico de barras sobre os jogadores dos Celtics
+
+```{r}
+cavs <- subset(players, Team == "Cavaliers")
+cavs.o <- cavs[order(cavs$Ht_inches), ]
+# O parâmetro "mar" estabelece o número de linhas da margem na sequência botton, left, top, right
+par(mar=(c(5,10,5,5)))
+barplot(cavs.o$Ht_inches, names.arg = cavs.o$Name, horiz = TRUE, las=1, main = "Altura dos jogadores dos Cavaliers")
+```
+
+O código abaixo gera um gráfico de barras com base na média de altura por posição dos jogadores.
+
+```{r}
+mediaAltura <- aggregate(Ht_inches ~ POS, data = players, mean)
+mediaAltura.o <- mediaAltura[order(mediaAltura$Ht_inches, decreasing = FALSE),]
+barplot(mediaAltura.o$Ht_inches, names.arg = mediaAltura.o$POS, horiz = FALSE, border = NA, las = 1, main = "Média de altura dos jogadores por posição")
+```
+
+*Histogramas em R*
+
+```{r}
+# Configurações para plotagem de gráficos
+par(mfrow=c(1,3), mar=c(3,3,3,3))
+
+# Serão criados histrogramas a partir das alturas dos jogadores. Cada grupo ('bin' na linguagem estatística) de altura é especificado pelo parâmetro 'breaks'
+
+hist(players$Ht_inches, main = "Histograma da altura dos jogadores", xlab = "polegadas", breaks = seq(65, 90, 1))
+
+hist(players$Ht_inches, main = "Histograma da altura dos jogadores", xlab = "polegadas", breaks = seq(65, 90, 2))
+
+hist(players$Ht_inches, main = "Histograma da altura dos jogadores", xlab = "polegadas", breaks = seq(65, 90, 5))
+
+```
+
+O código abaixo fornece um histograma da altura por posição dos jogadores.
+
+```{r}
+par(mfrow=c(2,3), las=1, mar=c(5,5,4,1))
+
+# Conjunto de posições
+posicoes <- unique(players$POS)
+
+for (i in 1:length(posicoes)) {
+  jogadoresPosicao <- subset(players, POS == posicoes[i])
+  hist(jogadoresPosicao$Ht_inches, main = posicoes[i], xlab = "polegadas", breaks = 65:90, border="#ffffff", col="#999999", lwd=0.4)
+
+}
+```
+
+
+*Funções para serem estudadas*
+
+help("str"")
+help("summary")
+help("barplot")
+help("par"")
+help("hist")
+help("seq")
