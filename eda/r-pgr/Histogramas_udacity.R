@@ -93,6 +93,7 @@ summary(sqrt(pf$friend_count))
 # Suposições de Regressão Linear 
 # https://en.wikipedia.org/wiki/Linear_regression#Assumptions
 
+# Sobre a distribuição normal
 # Distribuição Normal
 # https://en.wikipedia.org/wiki/Normal_distribution
 
