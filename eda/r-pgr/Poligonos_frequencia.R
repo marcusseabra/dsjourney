@@ -24,10 +24,10 @@ ggplot(aes(x = friend_count, y = ..count../sum(..count..)), data = subset(pf, !i
 
 # Use um polígono de frequência para determinar qual gênero dá mais curtidas na world wide web
 ggplot(aes(x = www_likes), data = subset(pf, !is.na(gender))) + 
-  geom_freqpoly(aes(color = gender), binwidth=10) + 
-  scale_x_continuous(limits = c(0, 20), breaks = seq(0, 20, 5)) +
+  geom_freqpoly(aes(color = gender)) +
+  scale_x_continuous() +
+  scale_x_log10() +
   xlab('Curtidas - friend_count') +
   ylab('Percentual de usuários com a contagem de amigos')
 
-summary(pf$www_likes)
-sd(pf$www_likes)
+by(pf$www_likes, pf$gender, sum)
