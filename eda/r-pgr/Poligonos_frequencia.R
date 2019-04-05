@@ -31,3 +31,8 @@ ggplot(aes(x = www_likes), data = subset(pf, !is.na(gender))) +
   ylab('Percentual de usuários com a contagem de amigos')
 
 by(pf$www_likes, pf$gender, sum)
+
+# https://flowingdata.com/2008/02/15/how-to-read-and-use-a-box-and-whisker-plot/
+# https://en.wikipedia.org/wiki/Interquartile_range
+# https://en.wikipedia.org/wiki/File:Boxplot_vs_PDF.svg
+  
