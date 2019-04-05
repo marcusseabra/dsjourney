@@ -1,4 +1,4 @@
-setwd('/home/seabra/dev/dsjourney-old/EDA/lesson3')
+setwd('/home/seabra/dev/dsjourney/eda/data')
 
 pf <- read.csv('pseudo_facebook.tsv', sep = '\t') 
 
@@ -77,6 +77,9 @@ qplot(x = age, data = pf,
 
 # Aplicando funções sobre variáveis para torná-las similares a distribuições normais
 summary(pf$friend_count)
+
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.0    31.0    82.0   196.4   206.0  4923.0 
 summary(log10(pf$friend_count))
 
 summary(log10(pf$friend_count + 1))
@@ -99,3 +102,47 @@ summary(sqrt(pf$friend_count))
 
 # Transformações de Log dos Dados
 # https://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/
+
+install.packages("gridExtra")
+library(gridExtra)
+
+# define individual plots
+# p1 = ggplot(...)
+# p2 = ggplot(...)
+# p3 = ggplot(...)
+# p4 = ggplot(...)
+# arrange plots in grid
+# grid.arrange(p1, p2, p3, p4, ncol=2)
+
+ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420')
+
+grf_1 = ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420')
+
+summary(log10(pf$friend_count + 1))
+# Min.  1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.000   1.505   1.919   1.868   2.316   3.692 
+
+ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420') +
+  scale_x_log10()
+
+grf_2 = ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420') +
+  scale_x_log10()
+
+summary(sqrt(pf$friend_count))
+# Min.  1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.000   5.568   9.055  11.088  14.353  70.164 
+
+ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420') +
+  scale_x_sqrt()
+
+grf_3 = ggplot(aes(x = friend_count), data = pf) + 
+  geom_histogram(color = 'black', fill = '#F79420') +
+  scale_x_sqrt()
+
+grid.arrange(grf_1, grf_2, grf_3, ncol=1)
+
