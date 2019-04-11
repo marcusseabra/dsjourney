@@ -1,3 +1,5 @@
+options(repos='http://cran.rstudio.com/')
+install.packages('ggplot2')
 library(ggplot2)
 
 dm <- diamonds
@@ -67,3 +69,7 @@ ggsave('/home/seabra/dev/dsjourney/eda/data/Histograma_sqtr.png')
 nrow(subset(dm, dm$price < 500))
 nrow(subset(dm, dm$price < 250))
 nrow(subset(dm, dm$price >= 15000))
+
+# A função by leva como argumento outra função, neste caso, 'summary'
+by(dm$price, dm$cut, summary)
+help("by")
