@@ -39,7 +39,9 @@ help("ggsave")
 
 ggsave('/home/seabra/dev/dsjourney/eda/data/Histograma.png', hist_1)
 
-# Utilização do faceting
+# Utilização do faceting :: http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/
+qplot(x = price, data = diamonds) + facet_wrap(~cut)
+
 ggplot(aes(x = price), data = dm) + 
   geom_histogram(binwidth = 85, color = 'black', fill = '#F79420') +
   coord_cartesian(xlim = c(0, 20000)) + 
@@ -47,10 +49,29 @@ ggplot(aes(x = price), data = dm) +
   ylab('Contagem') +
   facet_wrap(~cut)
 
+ggplot(aes(x = price), data = dm) + 
+  geom_histogram(binwidth = 85, color = 'black', fill = '#F79420') +
+  coord_cartesian(xlim = c(0, 20000)) + 
+  xlab('Preço dos diamantes') + 
+  ylab('Contagem') +
+  facet_wrap(~cut, scales = "free_y")
+
 # Avaliar o uso recomendado de scale_x_log10
 ggplot(aes(x = price), data = dm) + 
   geom_histogram(binwidth = 0.025, color = 'black', fill = '#F79420') +
   scale_x_log10() 
+
+# Você utiliza as variáveis de preço e quilate no parâmetro para x. Qual expressão 
+# dá o preço por quilate? 
+# Para distribuições de cauda longa, você pode adicionar a camada 
+# ggplot assim como scale_x_log10() para transformar a variável.
+ggplot(aes(x = price), data = dm) + 
+  geom_histogram(binwidth = 0.025, color = 'black', fill = '#F79420') +
+  scale_x_log10() + 
+  xlab('Preço dos diamantes') + 
+  ylab('Contagem') +
+  facet_wrap(~cut, scales = "free_y")
+
 
 summary(log10(dm$price + 1))
 
@@ -73,3 +94,37 @@ nrow(subset(dm, dm$price >= 15000))
 # A função by leva como argumento outra função, neste caso, 'summary'
 by(dm$price, dm$cut, summary)
 help("by")
+
+# Boxplots para variáveis categóricas :: As variáveis categóricas ficam no eixo x
+# enquanto as variáveis contínuas, no eixo y
+ggplot(aes(x = dm$color, y = dm$price), data = dm) + 
+  geom_boxplot() +
+  xlab('Cor') +
+  ylab('Preço')
+  
+ggplot(aes(x = dm$color, y = dm$price), data = dm) + 
+  geom_boxplot() +
+  scale_y_continuous(breaks = seq(0, 20000, 1000)) +
+  xlab('Cor') +
+  ylab('Preço')
+
+by(dm$price, dm$color, summary)
+
+# Função que retorna o intervalo interquartil
+IQR(subset(dm, dm$color == 'D')$price)
+IQR(subset(dm, dm$color == 'J')$price)
+
+ggplot(aes(x = dm$cut, y = dm$price), data = dm) + 
+  geom_boxplot() +
+  xlab('Tipo de corte') +
+  ylab('Preço')
+
+ggplot(aes(x = dm$clarity, y = dm$price), data = dm) + 
+  geom_boxplot() +
+  xlab('Brilho') +
+  ylab('Preço')
+
+ggplot(aes(x = dm$carat, y = dm$price), data = dm) + 
+  geom_boxplot() +
+  xlab('Brilho') +
+  ylab('Preço')
