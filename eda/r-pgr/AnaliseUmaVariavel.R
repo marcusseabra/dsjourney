@@ -5,6 +5,7 @@ library(ggplot2)
 dm <- diamonds
 
 summary(dm)
+str(dm)
 str(dm$color)
 
 # Sobre factor variable: https://stats.idre.ucla.edu/r/modules/factor-variables/
@@ -110,6 +111,13 @@ ggplot(aes(x = dm$color, y = dm$price), data = dm) +
 
 by(dm$price, dm$color, summary)
 
+ggplot(aes(x = dm$color, y = dm$price/dm$carat), data = subset(dm, dm$carat != 0)) + 
+  geom_boxplot() +
+  xlab('Cor') +
+  ylab('Preço por quilate')
+
+ggsave('/home/seabra/dev/dsjourney/eda/data/Boxplot_Cor_Preco_por_Quilate.png')
+
 # Função que retorna o intervalo interquartil
 IQR(subset(dm, dm$color == 'D')$price)
 IQR(subset(dm, dm$color == 'J')$price)
@@ -128,3 +136,19 @@ ggplot(aes(x = dm$carat, y = dm$price), data = dm) +
   geom_boxplot() +
   xlab('Brilho') +
   ylab('Preço')
+
+# Polígono de frequencia
+ggplot(aes(x = dm$carat), data = dm) + 
+  geom_freqpoly(binwidth=0.1) +
+  scale_x_continuous(breaks = seq(0, 7, 0.1)) +
+  scale_y_continuous(breaks = seq(0, 12000, 1000))
+
+str(dm)
+
+# Cheatseets :: https://www.rstudio.com/resources/cheatsheets/
+
+library(dplyr)
+install.packages("devtools")
+devtools::install_github("rstudio/EDAWR")
+
+library(EDAWR)
