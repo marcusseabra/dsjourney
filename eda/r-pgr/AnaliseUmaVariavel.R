@@ -146,9 +146,38 @@ ggplot(aes(x = dm$carat), data = dm) +
 str(dm)
 
 # Cheatseets :: https://www.rstudio.com/resources/cheatsheets/
+# Dados obtidos de Gapminder: http://www.gapminder.org/data/
+# Informações acerca do uso de serviços básicos de tratamento de esgoto
 
-library(dplyr)
-install.packages("devtools")
-devtools::install_github("rstudio/EDAWR")
+setwd('/home/seabra/dev/dsjourney/eda/data')
 
-library(EDAWR)
+# Ver documentação da função read.csv e do atributo check.names
+snt <- read.csv('at_least_basic_sanitation_overall_access_percent.csv', check.names = FALSE) 
+
+str(snt)
+
+# O dataset snt_ams contém dados de países da América do Sul
+snt_ams <- subset(snt, snt$country == 'Brazil' | snt$country == 'Argentina'
+                  | snt$country == 'Colombia' | snt$country == 'Chile' 
+                  | snt$country == 'Peru')
+
+# O conjunto deve ser transformado de modo a se ter as variáveis: country, year, sanitation_reach
+# http://garrettgman.github.io/tidying/
+
+install.packages(c("tidyr", "devtools"))
+??gather
+library(ggplot2) 
+library(tidyr)
+help("transform")
+
+snt_ams_tidy <- gather(snt_ams, "year", "sanitation_reach", 2:17)
+
+snt_ams_tidy <- transform(snt_ams_tidy, year = as.numeric(year))
+
+summary(snt_ams_tidy)
+str(snt_ams_tidy)
+
+ggplot(aes(x = snt_ams_tidy$country, y = snt_ams_tidy$sanitation_reach), data = snt_ams_tidy) + 
+  geom_boxplot() +
+  coord_cartesian(ylim = c(50, 100))
+
