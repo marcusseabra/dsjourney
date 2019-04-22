@@ -181,3 +181,9 @@ ggplot(aes(x = snt_ams_tidy$country, y = snt_ams_tidy$sanitation_reach), data = 
   geom_boxplot() +
   coord_cartesian(ylim = c(50, 100))
 
+# Trabalhando com datas
+# https://www.r-bloggers.com/date-formats-in-r/
+# https://www.rdocumentation.org/packages/lubridate/versions/1.7.4
+# https://r4ds.had.co.nz/dates-and-times.html
+# https://www.rdocumentation.org/packages/base/versions/3.5.3/topics/strptime
+
