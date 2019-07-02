@@ -35,6 +35,9 @@ ELASTICSEARCH
 :: Elasticsearch stores complex data structures that have been serialized as JSON documents
 :: Stored documents are distributed across the cluster and can be accessed immediately from any node
 
+Importante: https://www.elastic.co/pt/blog/found-crash-elasticsearch
+Onde parei: https://www.elastic.co/guide/en/elasticsearch/reference/current/documents-indices.html
+
 Conceitos Básicos
 	:: Near Realtime (NRT)
 	:: Cluster - Conjunto de nós (servidores) que, juntos, contêm os dados da aplicação.
