@@ -36,7 +36,7 @@ ELASTICSEARCH
 :: Stored documents are distributed across the cluster and can be accessed immediately from any node
 
 Importante: https://www.elastic.co/pt/blog/found-crash-elasticsearch
-Onde parei: https://www.elastic.co/guide/en/elasticsearch/reference/current/documents-indices.html
+Onde parei: https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
 
 Conceitos Básicos
 	:: Near Realtime (NRT)
