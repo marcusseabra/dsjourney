@@ -1,0 +1,51 @@
+Pandas #############################################################################################
+:: Merge
+   https://jakevdp.github.io/PythonDataScienceHandbook/03.07-merge-and-join.html
+:: Idioms
+:: Map (objetos series)
+:: apply (objetos DataFrame)
+:: lambda
+:: groupby e agg
+   https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html
+:: pivot table
+   df.pivot_table(values='nome da coluna cujos valores serão entrada de aggfunc', index='nome da coluna que formarão as linhas', columns='nome da coluna que será agrupada', aggfunc=np.mean)
+:: Funções sobre datas
+	Timestamp, period, datetime, timedeltas, date_range, asfreq, resample
+:: Goodhart's law
+	- Monitoramento
+	- Revisar modelos
+	- Paper: "Why should I trust you? Explaining the predictions of any classifier"
+
+Escalas
+:: ratio scales
+   função pandas: cut
+:: interval scales
+:: ordinal scales
+:: nominal scales (categorical data)
+   função pandas: astype
+   função pandas: get dummies
+
+Pesquisar
+:: Vetorização
+:: Chain indexing
+:: Method chaining
+:: Tom Augspurger -> padrões do Pandas
+
+Conceitos estatísticos básicos #####################################################################
+
+Distribuição binomial
+Distribuição uniforme
+Distribuição normal ou distribuição gaussiana
+Kurtosis
+Valor esperado, desvio padrão
+Chi squared (Chi quadrado?)
+Modalidade
+
+Livro texto: Think stats
+
+Teste de hipóteses
+Teste A/B
+p-hacking ou dredging
+
+
+https://www.pornhub.com/view_video.php?viewkey=ph5d33d800453fe

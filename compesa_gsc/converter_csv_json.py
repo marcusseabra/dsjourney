@@ -6,15 +6,15 @@ pasta_entrada = '/home/seabra/dev/dsjourney/compesa_gsc/data/input/'
 pasta_saida = '/home/seabra/dev/dsjourney/compesa_gsc/data/output/'
 pasta_processados = '/home/seabra/dev/dsjourney/compesa_gsc/data/processed'
 
+
 def gerar_arquivo_redmine_json():
     extracao_redmine_csv = os.path.join(pasta_entrada, "demandas_GSC.csv")
     lista_demandas_gsc = []
     demanda = {}
     num_rm_atual = 0
     num_rm_anterior = 0
-
-
     teste = 10
+
     with open(extracao_redmine_csv, encoding='utf-8-sig') as arq:
         dados_csv = csv.DictReader(arq, delimiter=';')
         for row in dados_csv:
@@ -28,8 +28,9 @@ def gerar_arquivo_redmine_json():
                     break
     arq.close()
 
+
 def converter_atualizacao_redmine():
-    dct
     return
+
 
 gerar_arquivo_redmine_json()
