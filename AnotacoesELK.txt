@@ -1,94 +1,57 @@
-LOGSTASH
+ElasticSearch ########################################################################################################################################
+Conceitos importantes:
+:: Index
+:: Documents
+:: Para cada campo nos documentos, é gerada uma estrutura de dados própria para armazenar índices específicos para os tipos de dados dos campos. 
+	Este é o motivo da rapidez do ElasticSearch
+:: API REST para gerenciar o cluster ElasticSearch e realizar buscas sobre os dados
+:: ElasticSearch Aggregations
 
-Pasta com definições de repositório
-    :: /etc/apt/sources.list.d/
+Onde parei:https://www.elastic.co/guide/en/elasticsearch/reference/7.2/scalability.html
 
-Layout de diretórios:
-    :: https://www.elastic.co/guide/en/logstash/current/dir-layout.html
-
-Configuração de pipelines
-    :: É possível configurar um pipeline através da linha de comando.
-       ./logstash -e 'input { stdin { } } output { stdout {} }'
-    :: 
-
-./logstash -f /home/seabra/dev/ELK/logstash-6.4.0/first-pipeline.conf --config.test_and_exit
-./logstash -f /home/seabra/dev/ELK/logstash-6.4.0/first-pipeline.conf --config.reload.automatic
-
-Plugins
-	:: Input plugins: https://www.elastic.co/guide/en/logstash/6.4/input-plugins.html
-	:: Filter plugins: https://www.elastic.co/guide/en/logstash/6.4/filter-plugins.html
-	:: Output plugins: https://www.elastic.co/guide/en/logstash/6.4/output-plugins.html
-	:: Codecs: https://www.elastic.co/guide/en/logstash/6.4/codec-plugins.html
-	:: Graphite : https://graphite.readthedocs.io/en/latest/overview.html
-	:: Twitter: https://www.elastic.co/guide/en/logstash/6.4/plugins-inputs-twitter.html
-				https://apps.twitter.com/
-				
->> Logstash efetua o processamento do pipeline na memoria
-   E possivel configurar para que seja executado e armazenado em disco: https://www.elastic.co/guide/en/logstash/6.4/persistent-queues.html
-				
-Melhoria de performance: https://www.elastic.co/guide/en/logstash/6.4/tuning-logstash.html
-
-Onde parei: https://www.elastic.co/guide/en/logstash/6.4/multiple-input-output-plugins.html
-
-ELASTICSEARCH
-:: Elasticsearch is a distributed document store
-:: Elasticsearch stores complex data structures that have been serialized as JSON documents
-:: Stored documents are distributed across the cluster and can be accessed immediately from any node
-
-Importante: https://www.elastic.co/pt/blog/found-crash-elasticsearch
-Onde parei: https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
-
-Conceitos Básicos
-	:: Near Realtime (NRT)
-	:: Cluster - Conjunto de nós (servidores) que, juntos, contêm os dados da aplicação.
-		Por padrão, o nome do cluster é "elasticsearch"
-		Configurar Clusters diferentes para os ambientes de desenvolvimento, homologação e produção
-	:: Node - Servidor que é parte de um cluster
-	:: Index (Índice) - Representam as tabelas
-	:: Document - Unidade de informação que pode ser indexada. Representa os registros do índices.
-	:: Shards e Replicas
-
-Iniciando Cluster e Node
-	:: ./elasticsearch - Inicia o Elasticsearch com o cluster padrão e um nó gerado randomicamente.
-	:: É possível estabelecer os nomes dos nós e do cluster
-		./elasticsearch -Ecluster.name=my_cluster_name -Enode.name=my_node_name
-		./elasticsearch -Ecluster.name=compesa_gsc -Enode.name=seabra
-		
-GET /_cat/nodes?v :: Informa o nó
-ip        heap.percent ram.percent cpu load_1m load_5m load_15m node.role master name
-127.0.0.1           26          67   7    1.23    1.27     1.22 mdi       *      seabra
-
-GET /_cat/indices?v :: Informa os índices disponíveis
-
-health status index   uuid                   pri rep docs.count docs.deleted store.size pri.store.size
-green  open   .kibana  6jook1rhQ9KIJrbBezTbDw   1   0          1            0        4kb            4kb
-yellow open   customer odLb1nwjQtKeqIcfuoeOlA   5   1          0            0      1.1kb          1.1kb
-
-Health = yellow :: yellow means that some replicas are not (yet) allocated. The reason this happens for this index is because Elasticsearch by default created one replica for this index. Since we only have one node running at the moment, that one replica cannot yet be allocated
-		
-Onde parei: https://www.elastic.co/guide/en/elasticsearch/reference/current/_index_and_query_a_document.html
-		
-KIBANA
-
-Layout de diretórios: https://www.elastic.co/guide/en/kibana/6.4/targz.html#targz-layout
-
-Iniciando: ./bin/kibana
-Link: http://localhost:5601
-
-Onde parei: https://www.elastic.co/guide/en/kibana/6.4/targz.html
-
-Artigos para uso com SQL:
-	:: https://www.elastic.co/blog
-	:: https://www.elastic.co/blog/logstash-jdbc-input-plugin
-	:: https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html
-	:: https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-1
-	:: https://www.elastic.co/blog/an-introduction-to-elasticsearch-sql-with-practical-examples-part-2
+Kibana ###############################################################################################################################################
+Conceitos importantes:
+:: Index patterns
+:: Possibilidade de salvar buscas
+:: Possibilidade de relatórios ad-hoc
+:: Ferramentas de visualização
+	:: Vega
 	
-Integração com Flink, Hadoop, Spark
-	:: https://www.elastic.co/blog/building-real-time-dashboard-applications-with-apache-flink-elasticsearch-and-kibana
-	:: https://ci.apache.org/projects/flink/flink-docs-stable/dev/connectors/elasticsearch.html
-	:: https://data-flair.training/blogs/limitations-of-apache-spark/
+Onde parei: 18min
+	
+Logstash #############################################################################################################################################
 
-Controle de acesso:
-	:: https://stackoverflow.com/questions/30138936/how-to-set-authentication-in-kibana
+Conceitos importantes:
+:: Input plugins
+:: Output plugins
+
+Onde parei: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
