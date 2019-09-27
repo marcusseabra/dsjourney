@@ -12,12 +12,19 @@ Onde parei:https://www.elastic.co/guide/en/elasticsearch/reference/7.2/scalabili
 Kibana ###############################################################################################################################################
 Conceitos importantes:
 :: Index patterns
+:: Spaces
 :: Possibilidade de salvar buscas
 :: Possibilidade de relatórios ad-hoc
 :: Ferramentas de visualização
 	:: Vega
+:: Buckets e Metrics
+:: Import/Export visualizations
+	:: Exportação de arquivos json
+:: Visualização em uma aplicação
+	:: share visualization
+	:: iframe
+:: Canvas
 	
-Onde parei: 18min
 	
 Logstash #############################################################################################################################################
 
