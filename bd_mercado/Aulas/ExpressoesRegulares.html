@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="expressões-regulares">Expressões Regulares</h1>
+<h2 id="âncoras">Âncoras</h2>
+<ul>
+<li>
+<p><code>^</code>: início da linha/string</p>
+</li>
+<li>
+<p><code>$</code>: fim da linha/string</p>
+</li>
+</ul>
+<h2 id="quantificadores">Quantificadores</h2>
+<ul>
+<li>
+<p><code>a*</code>: “a” zero ou mais vezes</p>
+</li>
+<li>
+<p><code>a+</code>: “a” uma ou mais vezes</p>
+</li>
+<li>
+<p><code>a?</code>: “a” zero ou uma vez</p>
+</li>
+<li>
+<p><code>a{m}</code>: “a” exatamente m vezes</p>
+</li>
+<li>
+<p><code>a{m,}</code>: “a” pelo menos m vezes</p>
+</li>
+<li>
+<p><code>a{m,n}</code>: “a” de m a n vezes</p>
+</li>
+</ul>
+<h2 id="operador-ou-e-colchetes">Operador OU e Colchetes</h2>
+<ul>
+<li>
+<p><code>a|b</code>: “a” ou “b”</p>
+</li>
+<li>
+<p><code>[abc]</code>: “a” ou “b” ou “c”</p>
+</li>
+<li>
+<p><code>[A-Z]</code>: de A a Z (maiúsculo)</p>
+</li>
+<li>
+<p><code>[A-Za-z]</code>: de A a Z (maiúsculo ou minúsculo)</p>
+</li>
+<li>
+<p><code>[0-9]</code>: de 0 a 9 (equivalente a \d)</p>
+</li>
+<li>
+<p><code>[\^ab]</code>: nem “a” nem “b” (negação)</p>
+</li>
+</ul>
+<h2 id="classes">Classes</h2>
+<ul>
+<li>
+<p><code>\d</code>: dígito (0 a 9)</p>
+</li>
+<li>
+<p><code>\w</code>: um caracter (letras, numeros ou underscore)</p>
+</li>
+<li>
+<p><code>\s</code>: um espaço (espaço, tabulação ou quebra de linha)</p>
+</li>
+<li>
+<p><code>.</code>: qualquer coisa (CUIDADO!)</p>
+</li>
+<li>
+<p>OBS: As versões em maísculas negam o padrão. Ex: <code>\D</code>: qualquer coisa que não é um dígito.</p>
+</li>
+</ul>
+<h2 id="caracteres-especiais">Caracteres Especiais</h2>
+<p><code>^.[$()|\*+?</code></p>
+<p>É preciso usar um <code>\</code> antes destes caracteres utilizá-los de forma literal.</p>
+<p>OBS: Dentro de colchetes, não é necessário.</p>
+<p>Ex: <code>\(</code></p>
+<h4 id="alguns-outros-significados-especiais">Alguns outros significados especiais:</h4>
+<ul>
+<li><code>\t</code>: tabulação</li>
+<li><code>\n</code>: quebra de linha</li>
+</ul>
+<h2 id="grupos">Grupos</h2>
+<ul>
+<li><code>(abc)</code>: captura “abc” como um grupo, para ser usado futuramente na expressão com <code>\\n</code>,<br>
+onde <code>n</code> é o número do grupo</li>
+</ul>
+<blockquote>
+<p><strong>Exemplo</strong>:</p>
+<p><code>(abc) \1</code>: captura “abc abc”</p>
+<p><code>(\d)\1</code>: captura “11”, “22”, “33”, etc</p>
+</blockquote>
+<h2 id="gananciosos-greedy-ou-preguiçosos-lazy">Gananciosos (greedy) ou Preguiçosos (lazy)?</h2>
+<p>Os quantificadores <code>\*</code>, <code>+</code> e <code>{}</code> são gananciosos por padrão, ou seja, tentam casar com a maior string possível.<br>
+Assim <code>&lt;.*&gt;</code> casa com a string inteira <code>"&lt;tag&gt;valor&lt;/tag&gt;"</code>.</p>
+<p>Se adicionarmos o lazy operator <code>?</code>, transformamos o operador em preguiçoso, e ele tentará casar com a menor string possível.<br>
+Assim <code>&lt;.*?&gt;</code> aplicado à string <code>"&lt;tag&gt;valor&lt;/tag&gt;"</code> casa com as strings <code>"&lt;tag&gt;" e "&lt;/tag&gt;"</code>.</p>
+</div>
+</body>
+
+</html>
