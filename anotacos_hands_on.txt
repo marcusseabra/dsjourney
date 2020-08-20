@@ -1,0 +1,11 @@
+CODETOWIN20
+Sobre unsupervised learning: Hands-On Unsupervised Learning Using Python
+
+Aplicações de Machine Learning: https://en.wikipedia.org/wiki/Machine_learning#Applications
+
+Na parte sobre deep learning, usar livro Deep learning witch python
+
+Outra fonte de pesquisa sobre machine learning: google scholar
+
+"O estudo de machine learning nos torna melhores cientistas, pensadores e solucionadores de problemas"
+
