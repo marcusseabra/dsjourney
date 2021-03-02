@@ -1,0 +1,100 @@
+MongoDB é um banco de dados NoSQL baseado em documentos
+Um documento é uma forma estruturada de organizar os dados em um conjunto de campos-valores
+Uma coleção é a estrutura de documentos organizados no MongoDB. Geralmente, os documentos possuem a mesma estrutura campos-valores
+
+Atlas :: Serviço em nuvem do MongoDB. Há o Atlas free tier que é gratuito, disponibiliza 510MB e três servidores (chamados réplicas)
+Passos para criação de um cluster no Atlas free tier
+	1) Criar uma organização
+	2) Criar um projeto dentro da organização
+	3) Criar um cluster dentro do projeto
+	4) Criar uma conexão :: "conectar de qualquer lugar" para ambiente de desenvolvimento
+	5) Criar um usuário :: login: m001-student; senha: m001-mongodb-basics 
+Para conectar, seguir os seguintes passos:
+	1) Clicar no botão "connect" no Atlas
+	2) Indicar que possui o mongo shell instalado e copiar o endereço para a linha de comando linux
+		Ex.: mongo "mongodb+srv://sandbox.bteig.mongodb.net/myFirstDatabase" --username m001-student
+	3) Informar usuário e senha
+	4) Uma outra forma de conexão seria: mongodb+srv://usuario:senha@URI_cluster_atlas.mongodb.net/[nome_base_dados] (entre [] é parâmetro opcional)
+		Ex.: mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net"
+			  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supllies"
+	
+No MongoDB, os dados são armazenados no formato BSON, a representação binária do formato JSON, que propicia otimização em termos de uso de espaço em disco, velocidade de leitura e flexibilidade. O intuito é melhorar a performance que seria muito prejudicada com se o formato JSON fosse usado diretamente.
+	:: Aquilo que pode ser representado por um JSON pode ser armazenado nativamente no MongoDB
+	:: JSON (JavaScript Object Notation) -> padrão para intercâmbio de dados na web
+	:: O formato BSON permite o uso de tipos de dados não suportados no formato JSON como os tipos de dados data e binários
+
+Importanto e exportando dados
+	:: Utilizando BSON -> mongodump e mongorestore
+	:: Utilizando JSON -> mongoexport (equivalente JSON ao mongodump) e mongoimport (equivalente JSON ao mongorestore)
+	:: Exportação de dados, ou seja, transferência do banco de dados para uma outra plataforma
+		:: Utilizando BSON :: mongodump --uri "<uri do cluster Atlas>/nome_base_dados"
+			Ex.: mongodump --uri "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies"
+		:: Utilizando JSON :: mongoexport --uri "<uri do cluster Atlas>/nome_base_dados" --collection=<nome da coleção> --out <nome do arquivo>.json
+			Ex.: mongoexport --uri "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies" --collection sample --out m001_sale.json
+	:: Importação de dados
+		:: Utilizando BSON :: mongorestore --uri "<uri do cluster Atlas>/nome_base_dados" --drop dump
+		:: Utilizando JSON :: mongoimport --uri "<uri do cluster Atlas>/nome_base_dados" --drop <nome do arquivo>.json 
+	:: Documentação sobre importação e exportação: https://docs.mongodb.com/database-tools
+	
+Comandos básicos
+	:: show dbs
+	:: use <nome_base_dados>
+	:: show collections
+	:: db.<nome_coleção>.find({"campo": "valor"})
+		:: db.<nome_coleção>.find({"campo": "valor"}).count()
+		:: db.<nome_coleção>.find({"campo": "valor"}).pretty()
+			Ex.: db.sample_training.trips.find({"birth year": 1961, "start station name": "Howard St & Centre St"}).pretty()
+	:: find() retorna um cursor que aponta para as próximos 20 documentos. Para iterar sobre os próximos, usa-se o camando it no mongoshell
+	:: db.<nome_coleção>.findOne()
+		:: Útil para avaliar a estrutura de um documento
+	
+Sobre o tipo ObjectId() que é o tipo de dado dos campos _id presente em todos os documentos do MongoDB
+
+Comandos básicos - CRUD
+	:: db.<nome_coleção>.insert({JSON})
+	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}])
+	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}], { "ordered": false })
+	:: db.<nome_coleção>.updateOne({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
+		:: Atualiza apenas uma ocorrência que satisfaça ao critério de pesquisa
+	:: db.<nome_coleção>.updateMany({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
+		:: Atualiza todas as ocorrências que satisfaçam ao critério de pesquisa
+	:: Operadores MQL: https://docs.mongodb.com/manual/reference/operator/update/#id1
+	
+Validação de esquema
+	:: É possível promover a validação do esquema nas inclusões e nas atualizações -> https://docs.mongodb.com/manual/core/schema-validation/index.html#schema-validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
