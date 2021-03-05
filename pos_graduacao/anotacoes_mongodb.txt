@@ -2,7 +2,7 @@ MongoDB é um banco de dados NoSQL baseado em documentos
 Um documento é uma forma estruturada de organizar os dados em um conjunto de campos-valores
 Uma coleção é a estrutura de documentos organizados no MongoDB. Geralmente, os documentos possuem a mesma estrutura campos-valores
 
-Atlas :: Serviço em nuvem do MongoDB. Há o Atlas free tier que é gratuito, disponibiliza 510MB e três servidores (chamados réplicas)
+Atlas :: Serviço em nuvem do MongoDB. Há o Atlas free tier que é gratuito, disponibiliza 512MB e três servidores (chamados réplicas)
 Passos para criação de um cluster no Atlas free tier
 	1) Criar uma organização
 	2) Criar um projeto dentro da organização
@@ -45,12 +45,14 @@ Comandos básicos
 		:: db.<nome_coleção>.find({"campo": "valor"}).pretty()
 			Ex.: db.sample_training.trips.find({"birth year": 1961, "start station name": "Howard St & Centre St"}).pretty()
 	:: find() retorna um cursor que aponta para as próximos 20 documentos. Para iterar sobre os próximos, usa-se o camando it no mongoshell
+	:: Sobre os operadores de consulta: https://docs.mongodb.com/manual/reference/operator/query/
 	:: db.<nome_coleção>.findOne()
 		:: Útil para avaliar a estrutura de um documento
 	
 Sobre o tipo ObjectId() que é o tipo de dado dos campos _id presente em todos os documentos do MongoDB
 
 Comandos básicos - CRUD
+	:: Manual Mongodb: https://docs.mongodb.com/manual/tutorial/query-documents/
 	:: db.<nome_coleção>.insert({JSON})
 	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}])
 	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}], { "ordered": false })
@@ -58,6 +60,8 @@ Comandos básicos - CRUD
 		:: Atualiza apenas uma ocorrência que satisfaça ao critério de pesquisa
 	:: db.<nome_coleção>.updateMany({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
 		:: Atualiza todas as ocorrências que satisfaçam ao critério de pesquisa
+		:: Ex.: db.zips.updateMany({"city" : "HUDSON"}, {"$inc" : {"pop" : 10}})
+		:: Ex.: db.zips.updateMany({"zip" : "12534"}, {"$set" : {"pop" : 17630}})
 	:: Operadores MQL: https://docs.mongodb.com/manual/reference/operator/update/#id1
 	
 Validação de esquema
