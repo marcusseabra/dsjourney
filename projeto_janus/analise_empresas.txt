@@ -1,32 +1,6 @@
-Petrobras #################################################################################################################################
-[4T20] A maior parte da produção (66%) veio do pré-sal, ajudando a reduzir o lifting cost (custo de extração) da companhia de US$ 7,8/boe para US$ 5,2/boe, uma queda de 33% na comparação com 2019.
-[4T20] O EBITDA Ajustado recorrente (aproximação do Lucro Operacional) foi de R$ 35,09 bilhões no trimestre e caiu 5,8% na comparação com o 4T19
-[4T20] O Lucro Líquido de R$ 60,45 bilhões no 4T20 impressiona quando comparado aos R$ 8,53 bilhões no 4T19, mas ele se deu por fatores não recorrentes positivos, que totalizaram R$ 41,8 bilhões
-[4T20] O Fluxo de Caixa Operacional encerrou o ano em US$ 28,9 bilhões, o maior da última década, mesmo quando comparado ao período em que o preço do petróleo estava por volta de US$ 100/bbl
-[4T20] O Fluxo de Caixa Livre foi de US$ 22,1 bilhões, o maior entre as majors (grandes operadoras de petróleo)
-[4T20] A empresa propôs a distribuição de R$ 10,3 bilhões em dividendos (R$ 0,787446 por ação). 
-[4T20] A Petrobrás conseguiu terminar o ano dando seguimento ao seu plano estratégico de redução da alavancagem, cortes de custo, venda de ativos non-core e priorização de investimentos mais rentáveis
-[4T20] O Custo dos Produtos Vendidos (CPV) totalizou R$ 34,61 bilhões no trimestre, uma queda de 22,6% na comparação com o 4T19. No ano como um todo, o CPV caiu 17,8% em relação a 2019. Causa: menor produção de óleo e gás no período provavelmente devido à falta de demanda em 2020
-[4T20] No 4T20, a empresa reconheceu um impairment de R$ 30,97 bilhões, pela reavaliação dos ativos de acordo com as alterações nos preços do petróleo Brent e do câmbio. O saldo dos impairments realizados em 2020 foi negativo em R$ 34,26 bilhões. Trata-se de efeito contábil (não caixa), mas cujo operacional/motivação deve ser bem compreendido
-[4T20] A empresa apresentou uma redução de 34% na linha de despesas gerais e administrativas
-[4T20] No resultado financeiro do 4T20, a empresa reportou ganhos de R$ 6,81 bilhões contra um prejuízo de R$ 6,59 bilhões auferido no mesmo período de 2019. A performance se deve aos ganhos cambiais e à boa gestão da dívida, que reduziu em aproximadamente R$ 1 bilhão as despesas com financiamento (em relação ao 3T20). Se levarmos em conta 2020 por completo, os resultados financeiros caíram 43,9% ante 2019, pela desvalorização do Real frente ao Dólar e pelo menor volume de exportações
-[4T20] Desconsiderando os efeitos não recorrentes, o Lucro Líquido alcançado no 4T20 seria de R$ 29 bilhões (120,1% maior em relação ao 4T19). No resultado anualizado, o Lucro Líquido recorrente apresentou uma queda de 64,2% em relação ao conquistado em 2019
-[4T20] O EBITDA Ajustado recorrente foi de R$ 35,09 bilhões no 4T20 e caiu 5,8% em relação ao 4T19. Esta queda também foi acompanhada e muito semelhante (5,7%) na comparação entre os resultados dos anos completos
-[4T20] No 4T20, os investimentos (CAPEX) foram de US$ 2,04 bilhões (89,7% abaixo do 4T19). No ano, a diferença também é significativa, com 70,6% de queda e US$ 8,05 bilhões investidos.
-[4T20] A empresa adotou estratégia de priorizar projetos que podem dar retorno com o preço do barril igual (breakeven) ou superior a US$ 35,00
-[4T20] No 4T20, a Petrobras apresentou uma geração de caixa operacional de R$ 37,7 bilhões, além de um Fluxo de Caixa Livre (FCL) de R$ 30,24 bilhões. Esses resultados foram muito superiores em relação aos apresentados no 4T19, com um acréscimo de 22,8% no Fluxo de Caixa Operacional (FCO) e de 30,1% no Fluxo de Caixa Livre
-[4T20] Em 2020, o FCO foi o maior em 10 anos, totalizando R$ 148,1 bilhões, 45,54% maior em relação ao apresentado em 2019. Já o FCL foi de R$ 112,8 bilhões (54,1% maior frente ao resultado do ano anterior)
-[4T20] A Dívida Bruta totalizou US$ 75,5 bilhões, um número que é 13% inferior ao previamente estabelecido como meta da empresa para 2020
-[4T20] A Dívida Líquida, assim como a Dívida Bruta, apresentou uma redução em relação ao 3T20, com o valor de US$ 63,2 bilhões
-[4T20] O indicador Dívida Líquida/EBITDA ajustado ficou em 2,22x no 4T20, com uma queda em relação ao apresentado no 3T20, que foi de 2,33x
-[4T20] A Petrobras tem como meta atingir uma Dívida Bruta de US$ 60 bilhões até 2022 e, a partir daí, a empresa abriria espaço para um pagamento mais robusto de dividendos
-
-Conclusões
-Na análise de Petrobrás, talvez valha mais a pena avaliar os número em dólares do que em reais já que o produto principal está atrelado ao dólar
-Segundo a Suno, a empresa apresentou resultados muito bons apesar dos problemas causados pela Covid-19 e pela redução da demanda em parte do ano de 2020
-A manutenção dos rumos da gestão é primordial para que a empresa volte a pagar dividendos. Prestar atenção aos fatos e não aos ruídos
-O grande risco é interferência governamental (sócio majoritário). Haveria regra que, caso ocorra qualquer tipo de subsídio aos produtos oferecidos pela companhia, determina que o governo é obrigado a cobrir, no mesmo ano fiscal, todos os prejuízos que vierem a acontecer como consequência deste subsídio. Uma mudança regulamentar poderia ser o gatilho para minar os fundamentos da empresa
-Aumenta o risco de investimento na empresa. O turnaround implementado nos últimos anos pode ser muito prejudicado com a aproximação das eleições, alta do dólar e alta do barril de petróleo.
+Vivo ######################################################################################################################################
+O setor de telecom é muito dependente de Capex, o que significa que as companhias precisam investir/reinvestir em suas operações periodicamente – e isso faz sentido, dado que a tecnologia muda bastante e constantemente. Para gerar caixa consistentemente, a companhia tem que ser muito “redonda”, ou seja, focada e com uma estratégia de monetização muito boa
+Quando falamos de estratégia de monetização, há dois aspectosa serem considerados: a capacidade da companhia de (i) transformar um cliente pré‐pago em pós‐pago e (ii) cobrar mais por usuário, gerando uma maior receita média por usuário (mais conhecida como ARPU)
 
 
 ###########################################################################################################################################
@@ -64,57 +38,30 @@ Diversificação dos mercados de atuação ::
 Fundamento
 Manutenção do investimento em pesquisa e desenvolvimento para garantir presença relevante no mercado. A migração dos automóveis com motores a combustão interna para motores elétricos/híbridos deve ser acompanhada
 
+###########################################################################################################################################
 Valuation:
 	* https://www.youtube.com/watch?v=TUR7SOUlubw
 	* https://www.youtube.com/watch?v=iSNSKEQJP_s&list=PLHIDz2SDupQdpn0BMbxVixAvd3xj5fa-r&index=3
 
 https://www.youtube.com/watch?v=D_MfhYIS9t8
 
-Live de fundos imobiliários: https://conteudos.xpi.com.br/fundos-imobiliarios/relatorios/live-fundos-imobiliarios-o-que-esperar-para-2020-acompanhe-nesta-segunda-feira-27-13h/
-
 Cálculo de retornos: https://blog.rico.com.vc/melhores-fundos-imobiliarios
 
 https://www.youtube.com/watch?v=zF2pXXJIAGM 40m
 
-https://www.googleadservices.com/pagead/aclk?sa=L&ai=CZrlF1qpAXsmdBcHMzQaR7onwDLPvzLdV87fTzoIKwI23ARABIABgzdDlgJADggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAaHcvN0DqQK94-kMKBaPPqgDBKoE_QFP0Pxb3NskiVYr0YxDLzaWpVIbydaiU_dxYxonjWzXeoCx2O1TJHDbHHvnfG4y4S0myT4cuR1218g7rdQ3aiyTUdQGIP7kCpnE3No-yjMbcEbDl8LLgkAGP_w5-6tH8mSMyw5guMIFz9KglxmtWaZ3qr38_CL4rWDwDz36JFtI7r_tIteE-ukU3GtH3v0ArfGPOftykWNSmA0RCl-f-pecz-6yizCvPu0hDVXUi4MR2e34w1cvAReByqGwEDlOKM6N6VxLiMaLmcNJtjiqDc9J1GvWIma2TjdzlrHzUkyX3cvMc778WuMmdzvTTlplZ8AZcggxbIZqgt2EctJQkgUNCBIwrIm36YS5tPDlAZIFCQgTaAJ4g-XRPKAGVdgGBYAHy5DMO4gHAZAHAqgHqNIbqAe2B6gH4M8bqAfp1BuoB7bXG6gHjM0bqAfy2RuoB9XOG6gHgcYbqAeYzhuoB6vFG6gH3s4bqAe_1RuoB8LaG5IICzVlRFJ5RTB0eEt30ggECAAQAvIIH2NhLXl0LWhvc3QtcHViLTE1MDg0ODExNDEwNzgwNDKxCfVCq4R5Pi1qyAkXoQvGQEgo1MjvBrgT____________AbAUAcAVAdgVAQ&num=1&cid=CAESD-D27dk08NcD34or8oLoOg&sig=AOD64_0Apn4jpXJ5d7qKWmW74R6SlUQCUw&adurl=http://www.youtube.com/watch%3Fv%3D5eDRyE0txKw&ctype=21&video_id=5eDRyE0txKw&client=ca-pub-6219811747049371
-O que é payout???
-
 Fundos para marcar: Dynamo, Constellation, Brasil Capital
-As Small Caps possuem pouca participação em um fundo para não influenciar no preço da ação
 
-Recomendações de leitura
-The Outsiders
-Jim Simons
-Valuation
-	* Damodaran
-	* Análise básica de valuation: https://www.youtube.com/watch?v=te7U49AkNew&list=PLpssGDu20NhI2x2TYTri_mfNBfIJ6mxll&index=6
-	* Taxa Interna de Retorno
-	* Fluxo de Caixa Descontado
-	* Análise de Múltiplos
-	* Análise de cenários e probabilidades de cada um deles
-Shaholders Yield :: https://www.sunoresearch.com.br/artigos/shareholders-yield-um-dos-melhores-indicadores-para-avaliar-uma-acao/
-
+###########################################################################################################################################
+Shareholders Yield :: https://www.sunoresearch.com.br/artigos/shareholders-yield-um-dos-melhores-indicadores-para-avaliar-uma-acao/
 Histórico de indicadores: https://plataforma.penserico.com/dashboard.pr
-
-Fonte: Suno Research em <a href="https://www.sunoresearch.com.br/artigos/shareholders-yield-um-dos-melhores-indicadores-para-avaliar-uma-acao/">Shareholders Yield: um dos melhores indicadores para avaliar uma ação - Suno Research</a>
 Fluxo de caixa: https://www.sunoresearch.com.br/artigos/fluxo-de-caixa/
 Margem de segurança: https://www.sunoresearch.com.br/artigos/importancia-da-margem-de-seguranca/								
 
-Para pesquisar:
-:: Fórmula de Joel Greenblatt
-:: Método de Bazin (faça fortuna com ações, Décio Bazin)
-	- Dividend yield >= 6%
-	- Pouca dívida :: dívida líquida / patrimônio líquido < 1
-						   dívida líquida / ebitda < 3
-						   A menos que haja motivos que justifiquem relações maiores que as sugeridas (sugestão suno research)
-	- Boa governança
-:: Damodaran - The Little Book of Valuation
-
 Coleta de demonstrações financeiras: https://www.youtube.com/watch?v=bzAA4VHqBA4
+	:: Pacote R que já promove download de dados da CVM
 Obtenção de cotações: Acho que o primeiro, terceiro e quinto vídeo dessa playlist pode te ajudar: https://www.youtube.com/watch?v=OkNo6vEAG7w&list=PLz9-k01Buo3IH0wXx6fFftNxx7kIWTh8Q
 Curso de contabilidade: http://www.contabilidademq.com.br/2019/02/curso-completo-de-analise-demonstracoes-contabeis.html
 Curso de valuation: http://www.contabilidademq.com.br/2019/05/curso-completo-de-valuation.html
-Simulador de bolsa: https://www.youtube.com/watch?v=Tb_bBY2ULFE
 
 #############################################################################################################################
 #############################################################################################################################

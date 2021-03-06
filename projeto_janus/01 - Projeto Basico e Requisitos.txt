@@ -1,0 +1,79 @@
+:: Possibilitar aplicação do modelo aos dados da Compesa e de suas gerências regionais
+	:: Cada uma das gerências poderia ser tratada como uma empresa separada. As similaridades regionais, entretanto, poderiam ser consideradas para separar grupos (clusters)
+
+:: Avaliar feature engineering sobre os dados do modelo
+	:: Para a Compesa, que dados do IBGE, Banco Central, Inpe poderiam ser agregados para criar novas possibilidades de modelagem da empresa?
+
+:: Obtenção dos documentos oficiais a partir da CVM ou do RI das empresas
+	:: Ferramenta R: https://github.com/msperlin/GetDFPData
+	:: Ferramenta R: https://www.youtube.com/watch?v=bzAA4VHqBA4
+
+:: Obtenção de linhas de receita e geração de gráfico de tendência de cada uma das linhas
+	:: Para a Compesa, por exemplo, água, esgoto e serviços indiretos
+:: CAGR das linhas de receita e da receita consolidada
+:: Geração gráfico de tendência de margem Ebitda
+:: Histórico de evolução do Ebitda
+:: CAGR do Ebitda
+:: Evolução do EV/Ebitda
+:: Considerar as mesmas funcionalidades do Ebitda para o Ebit
+:: Evolução do ROIC
+:: Evolução da necessidade de capital de giro
+:: Histórico de evolução do Capex com linha de tendência e CAGR
+:: Histórico de evolução da Dívida Líquida com linha de tendência e CAGR
+:: Histórico de evolução do Fluxo de Caixa Livre e do FCL Capex com linhas de tendência
+:: Evolução do Fluxo de Caixa Operacional
+
+:: Memória de cálculo do valuation da companhia
+	:: Todas as variáveis que compõem o cálculo de valuation devem ter seu histórico
+	
+:: Processo de cálculo de valuation (precisa de apuração e aprofundamento)
+	:: Estimar taxa de crescimento da receita líquida
+	:: Estimar taxa de crescimento dos custos considerando percentual da receita
+	:: Estimar taxa de crescimento das despesas percentual da receita
+	:: Estimar variação da depreciação, amortização e exaustão percentual da receita
+	:: Estimar crescimento da Necessidade de Capital de Giro (NCG)
+	:: FCL = FCO - FCF - FCI
+		:: FCL :: Fluxo de caixa livre
+		:: FCF :: Fluxo de caixa de financiamento
+		:: FCI :: Fuxo de caixa de investimento
+		:: FCO :: Fluxo de caixa operacional. Deve-se tentar decompor o FCO em função do lucro líquido, na NCG e da depreciação, amortização, exaustão
+	:: Estimar o FCL no período de estimativa de crescimento (7, 10, 15 anos)
+	:: Calcular a taxa de desconto adequada par a empresa para traze o FCL estimado a valor presente
+		:: Custo de capital próprio :: Dado pelo CAPM
+		:: (REVISAR) Proporção do capital de terceiros :: (Passivo circulante + Exigível de longo prazo) / (Passivo total)
+		:: O custo de capital de terceiros deve ser investigado no balanço patrimonial e na DRE buscando a taxa de endividamento da empresa
+		:: A taxa de desconto é obtida pelo WACC. Trata-se do valor mínimo e pode-se buscar uma margem de segurança neste ponto
+	:: Os FCL's estimados são trazidos a valor presente pela taxa de desconto obtida
+	:: É realizado o cálculo da perpetuidade
+	:: Com a soma dos FCL's estimados com a perpetuidade, divide-se pelo número de ações obtendo o valor justo da empresa/ação
+
+:: Obtenção da estrutura a termo da taxa de juros
+:: Obtenção de outros indicadores como: dólar, atividade industrial, conta corrente
+	:: Expectativa de inflação (Bacen, Focus)
+	:: Crescimento da dívida pública
+	:: Inflação
+	:: PIB
+	:: Selic
+	:: IMA-B
+	:: DI Futuro
+	:: Balança comercial
+	:: PIB China, EUA, Mundo
+	:: Nível de emprego/desemprego :: pnad (ibge); caged
+	:: Preço histórico das commodities: celulose, petróleo, minério de ferro, carnes, produtos agrícolas
+	:: Ciclo das commodities (celulose, proteínas, petróleo, produtos agrícolas)
+
+:: Avaliar parâmetros Six Sigma que poderiam ser aplicáveis a análise estatística de parâmetros de cálculo do valuation da empresa
+	:: Riscos
+	:: Oportunidades e forças
+	:: FMEA
+
+:: Ordenação pela fórmula mágica de Joel Greenblat. Não deve ser possível incluir um gráfico de tendência a menos que seja possível manter um histórico de todas as empresas
+	:: Considerar a fórmula mágica simplificada e aquela mais sofisticada (vídeo de José Kobori)
+	:: Kobori: https://www.youtube.com/watch?v=HWpY8UchBb4&t=1448s
+
+:: Teste de Stress :: possibilidade de teste de stress para mensurar valuations futuros considerando variação de parâmetros mais sensíveis através de análise estatística e de probabilidades (monte carlo)
+	:: Cenários otimistas e pessimistas considerando os riscos (parâmetros Six Sigma) levantados
+
+:: Avaliar processamento de linguagem natural para analisar release de resultados
+
+:: Pesquisr conceito/ferramenta: feature store, sagemaker
