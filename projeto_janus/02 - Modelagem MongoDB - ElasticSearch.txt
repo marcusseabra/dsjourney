@@ -1,0 +1,15 @@
+Collection: Resultado trimestral
+
+Empresa
+CNPJ
+Ticker
+Trimestre
+Tipo resultado: regulatório ou IFRS
+Receita consolidada
+	Valor
+	Linhas de receita: [nome_linha_receita, valor, margem_ebitda, margem_liquida]
+	Margem_ebitda
+	Margem_liquida
+Divida_liquida
+patrimonio_liquido
+ev_entreprise_value
