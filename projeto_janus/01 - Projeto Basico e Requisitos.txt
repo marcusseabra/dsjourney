@@ -22,6 +22,7 @@
 :: Histórico de evolução da Dívida Líquida com linha de tendência e CAGR
 :: Histórico de evolução do Fluxo de Caixa Livre e do FCL Capex com linhas de tendência
 :: Evolução do Fluxo de Caixa Operacional
+:: Evolução do PEG Ratio e/ou PEGY
 
 :: Memória de cálculo do valuation da companhia
 	:: Todas as variáveis que compõem o cálculo de valuation devem ter seu histórico
