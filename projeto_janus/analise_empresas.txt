@@ -1,21 +1,19 @@
-Devenant Recebíveis Imobiliários ##########################################################################################################
-DEVA11
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
-[01/2021] 
+Fator Verità FII ##########################################################################################################################
+VRTA11
 
+[01/2021] Benchmark: IGPM + 6% a.a.
+[01/2021] Destaques: 7ª emissão de cotas em agosto/2020. O fundo segue na busca por alocação dos recursos captados
+[01/2021] Destaques: quanto ao pipeline da 7ª emissão, oito CRI's foram adquiridos e outros 9 CRI's foram aprovados pelo comitê da gestora e estão em fases diversas no processo de aquisição (quatro em fase de diligência e os demais em fase final de documentação)
+[01/2021] Destaques: caixa de R$ 366 milhões em parte pela não alocação da emissão
+[01/2021] Destaques: a gestão vem tendo cuidado em operações com IGP-M devido à alta muito acima da expectativa de mercado. Segundo o relatório, houve inclusive solicitação de troca do índice
+[01/2021] Receitas: R$  (12 meses); R$  (02/2021)
+[01/2021] Despesas: R$  (12 meses); R$  (02/2021)
+[01/2021] Distribuição: R$  (12 meses); R$  (02/2021)
+[01/2021] 
+[01/2021] 
+[01/2021]  
 
+O gestor vem sendo cuidadoso (análise de diligências, garantias e risco x retorno), ao menos na análise do relatório, na aquisição de novos CRI's a partir dos recursos da 7ª emissão. Isso talvez explique a demora na alocação já que a emissão ocorreu em agosto/2020
 
 XP LOG ####################################################################################################################################
 [02/2021] Não recorrentes :: Ganho de capital de cerca de R$ 0,6 milhão obtido com a venda no mercado secundário de parte de cotas de fundos imobiliários adquiridas pelo Fundo

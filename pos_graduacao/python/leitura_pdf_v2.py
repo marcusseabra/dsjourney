@@ -3,16 +3,16 @@ import pdfplumber
 
 def leitura_arquivos_pdf():
     # pdfplumber.open retorna instância da classe pdfplumber.PDF
-    with pdfplumber.open("/home/seabra/Documentos/Pessoal/Investimentos/Extrato_XP.pdf") as pdf:
-        primeira_pagina = pdf.pages[0]
-        print(primeira_pagina.chars[0])
+#    with pdfplumber.open("/home/seabra/Documentos/Pessoal/Investimentos/Extrato_XP.pdf") as pdf:
+#        primeira_pagina = pdf.pages[0]
+#        print(primeira_pagina.chars[0])
 
-        metadados = pdf.metadata
-        print(metadados)
+#        metadados = pdf.metadata
+#        print(metadados)
 
         # print(primeira_pagina.extract_text(x_tolerance=2, y_tolerance=2))
 
-    with pdfplumber.open("/home/seabra/Documentos/Pessoal/Investimentos/Nota_Negociacao_2020-08-05.pdf", password = "027") as pdf:
+    with pdfplumber.open("/home/seabra/Documentos/IR_2021/Nota_Negociacao_2019_12_03.pdf", password = "027") as pdf:
         primeira_pagina = pdf.pages[0]
         print(primeira_pagina.chars[0])
 
