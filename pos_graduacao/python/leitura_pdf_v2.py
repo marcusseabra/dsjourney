@@ -12,11 +12,11 @@ def leitura_arquivos_pdf():
 
         # print(primeira_pagina.extract_text(x_tolerance=2, y_tolerance=2))
 
-    with pdfplumber.open("/home/seabra/Documentos/IR_2021/Nota_Negociacao_2019_12_03.pdf", password = "027") as pdf:
+    with pdfplumber.open("/home/seabra/Documentos/IR_2021/Triunfo.pdf", password = "027") as pdf:
         primeira_pagina = pdf.pages[0]
         print(primeira_pagina.chars[0])
 
-        print(primeira_pagina.extract_text(x_tolerance=2, y_tolerance=2))
+        # print(primeira_pagina.extract_text(x_tolerance=2, y_tolerance=2))
         # print(primeira_pagina.extract_tables())
         print(primeira_pagina.find_tables())
 

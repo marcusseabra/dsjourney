@@ -58,6 +58,7 @@ Comandos básicos - CRUD
 	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}], { "ordered": false })
 	:: db.<nome_coleção>.updateOne({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
 		:: Atualiza apenas uma ocorrência que satisfaça ao critério de pesquisa
+		:: Ex.: db.grades.updateOne( {"student_id": 250, "class_id": 339}, {"$push" :  {"scores" : {"type": "extra_credit", "score": 100}} })
 	:: db.<nome_coleção>.updateMany({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
 		:: Atualiza todas as ocorrências que satisfaçam ao critério de pesquisa
 		:: Ex.: db.zips.updateMany({"city" : "HUDSON"}, {"$inc" : {"pop" : 10}})
