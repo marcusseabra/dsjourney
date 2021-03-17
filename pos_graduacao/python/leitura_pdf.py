@@ -18,7 +18,7 @@ fake_file_handle = io.StringIO()
 converter = TextConverter(resource_manager, fake_file_handle, laparams=LAParams())
 page_interpreter = PDFPageInterpreter(resource_manager, converter)
 
-with open('/home/seabra/Documentos/IR_2021/Nota_Negociacao_2020-06-26.pdf', 'rb') as fh:
+with open('/home/seabra/Documentos/IR_2021/Notas_Negociacao/Nota_Negociacao_2020-01-30.pdf', 'rb') as fh:
 
     for page in PDFPage.get_pages(fh,
                                   caching=True,
