@@ -1,6 +1,8 @@
 import pdfplumber
 import pandas as pd
 
+# https://github.com/jsvine/pdfplumber/blob/stable/examples/notebooks/extract-table-nics.ipynb
+# https://github.com/jsvine/pdfplumber#extracting-tables
 
 def leitura_arquivos_pdf():
     print("Versao de leitura das tabelas #########################################################################################\n")
