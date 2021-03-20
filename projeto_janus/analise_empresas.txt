@@ -1,3 +1,60 @@
+Modelo de Gordon ##########################################################################################################################
+Avaliar aula 8 em que o Modelo de Gordon foi apresentado
+
+P = D / (K - G)
+P - Preço
+D - Dividendo por cota esperado para os próximos 12 meses
+K - Taxa de desconto exigida (títulos de longo prazo)
+G - Taxa de crescimento dos dividendos na perpetuidade
+
+:: É simplificado para multiativos e bem aproximado para monoativos com contratos únicos
+
+Kepler Weber ##############################################################################################################################
+O market share da Kepler Weber é de quase 50% (4 vezes maior que o segundo colocado) atingido em quase 100 anos de história.
+É fornecedora de equipamentos pós-colheita: desde o beneficiamento (limpeza, movimentação, secagem, seleção e armazenamento) até o destino de exportação.
+A Kepler Weber idealiza, projeta, planeja e entrega produtos customizados e 75% das obras são montadas por ela mesma.
+A proposta de valor da empresa engloba a padronização e melhora na qualidade dos grãos (aumentando o preço de venda), redução de perdas, capacidade de armazenamento e menores custos de intermediação.
+No Brasil, 16% dos produtores possuem capacidade própria de armazenagem, ou seja, há um mercado amplo para a empresa. Nos Estados Unidos, por exemplo, a capacidade de armazenagem chega a 65%; no Canadá, chega a 8%; na Argentina, 21%.
+O Brasil vem aumentando a capacidade produtiva de grãos (CAGR de 4% nos últimos 20 anos) e isto pressiona a melhora na capacidade de armazenagem aumentando a necessidade dos produtos oferecidos por empresas como a Kepler Weber.
+A empresa passou por uma reestruturação após crise vivenciada nos anos 2015/2016 incluindo austeridade de despesas e gestão de preços e margens de distribuição.
+A empresa possui linhas de receitas (peças e serviços, por exemplo), que vêm crescendo nos últimos anos, que ajudam a atacar a característica cíclica dos produtos agrícolas diminuindo o risco de queda de lucros da empresa.
+Os clientes adiantam os pagamentos e financiam os projetos da Kepler Weber. Isto ajuda na boa gestão do capital de giro e gera menos stress sobre o caixa da empresa.
+Clientes :: Tradings, empresas que atuam como intermediárias entre vendedores e compradores em operações de importação e exportação
+Clientes :: Cerealistas, companhias que compram grãos e prestam serviços de beneficiamento
+Clientes :: Indústrias que estocam os insumos (grãos) para processá-los
+Clientes :: Produtores rurais e cooperativas :: donos de terras que produzem os grãos e desejam estocá-los para posterior venda do produto em ciclo de melhor preço
+Drivers :: Aumento do consumo de alimentos
+Drivers :: Investimento em infraestrutura e logística no Brasil. As concessões e renovações de ativos no setor de logística/infraestrutura (portos, ferrovias, transporte marítimo) geram maior necessidade de armazenagem de grãos
+Drivers :: Ciclo no pós-colheira. Após aumento na capacidade produtiva, o próximo passo também no sentido de aumentar a produtividade pode ser o investimento em pós-colheita: qualidade e padronização de grãos, redução de perdas, emponderamento do produtor para que ele aguarde ciclos mais favoráveis de preço
+As margens bruta e Ebitda giram na casa dos 24% e 16%, respectivamente e vem sendo estratégia da empresa a otimização e sustentabilidade destas margens
+Avenidas de crescimento :: Setor de peças e serviços que é menos cíclico e vem aumentando ano a ano na linha de receita
+Linhas de receita :: Armazenagem - 65% da Receita Líquida. Ela detém conhecimento, proximidade com a base de clientes, segurança e confiabilidade na execução de projetos.
+Linhas de receita :: Exportações - 16% da Receita Líquida. Os mercados de destino vêm sendo na América Latina, mas a empresa vem procurando exportar (realizar projetos) para a Ásia e para a África
+Linhas de receita :: Granéis - 6% da Receita Líquida. Equipamentos voltados para terminais portuários e que dependem muito de investimentos em infraestrutura
+Linhas de receita :: Peças e serviços - 15% da Receita Líquida. Há cinco centros de peças espalhados pelo país e esta linha de receita vem sendo estimulada pelo management atual. Faz sentido. Na medida que houver maior disponibilidade de armazenamento, haverá maior necessidade de manutenção.
+A empresa pode se beneficiar com a plataforma Sync para capturar e gerenciar dados do campo
+Plano Safra :: Um programa de crédito governamental com linha denominada "Programa de Construção e Ampliação de Armazéns" (PCA)
+Plano Safra :: O programe é anual e oferece taxas na casa dos 5%-6% ao ano frente a 8%-9% do setor privado
+Plano Safra :: Em 2020, o montante oferecido foi de R$ 2,1 Bi. O necessário seria de R$ 6 Bi
+Valuation :: A Kepler Weber é categorizada pela Empíricus como empresa industrial tal como a Weg, Shulz e Mahle Metal Leve
+Valuation :: Vem sendo negociada com desconto de 15% em relação aos pares no múltiplo EV/Ebitda
+Valuation :: Para 2021, a Empíricos estima EV/Ebitda da ordem de 6x
+Dividendos :: O payout vem sendo de 50% gerando um DY de 3%. A Empíricus imagina aumento de payout dado elevado nível de caixa da empresa atualmente
+Risco :: Dependência de crédito governamental e aumento da taxa de juros de crédito privado
+Risco :: Fechamento de capital através de compra por entidade interessada. Já houve oferta pública de aquisição (OPA) com prêmio de quase 25%
+Risco :: Competição com gigantes internacionais e nacionais (Pagé e Camil)
+Risco :: Ciclos agrícolas e climáticos
+Risco :: Agenda de investimentos em infraestrutura e logística
+
+
+Gosto muito de teses que aproveitam a vocação brasileira de produtos agrícolas e parabenizo a equipe pela escolha da Kepler Weber como a mais nova bezerra.
+
+Semelhança com Alupar como empresa de engenharia
+Risco que fundos imobiliários (Quasar Agro, BTG Agro Logística) podem gerar ao market share
+Há chance da empresa explorar os mercados da Argentina, Uruguai ou outros países com vocação agrícula na América do Sul
+Riscos
+
+
 Fator Verità FII ##########################################################################################################################
 VRTA11
 
