@@ -2,6 +2,7 @@ import pdfplumber
 import os
 import re
 import datetime
+import json
 
 # https://github.com/jsvine/pdfplumber/blob/stable/examples/notebooks/extract-table-nics.ipynb
 # https://github.com/jsvine/pdfplumber#extracting-
@@ -54,6 +55,7 @@ def leitura_notas_negociacao():
 
     for item_negociacao in lista_final:
         print(item_negociacao)
+        tratar_registros_negociacao(item_negociacao)
 
 
 def tratar_registros_negociacao(registro_negociacao):
@@ -64,29 +66,115 @@ def tratar_registros_negociacao(registro_negociacao):
                 "valor_negociado": None,
                 "data_negociacao": None,
                 "is_compra": True}
+    valor_negociado = 0
 
     # O ativo negociado pode estar no quarto ou no quinto ou no sexto item
     # do registro de negociação
+    nomeAtivo = consultarNomeAtivo(registro_negociacao[3])
+    if nomeAtivo is None:
+        nomeAtivo = consultarNomeAtivo(registro_negociacao[4])
+        if nomeAtivo is None:
+            nomeAtivo = consultarNomeAtivo(registro_negociacao[5])
+    resposta['ativo'] = nomeAtivo
+
+    # O penúltimo item corresponde ao indicador de compra ou venda que, em alguns casos,
+    # precisa ser corretamente tratado
+    indicadorCompraVenda = resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 2]
+    if indicadorCompraVenda == "C":
+        resposta['is_compra'] = False
+    elif indicadorCompraVenda == "D":
+        resposta['is_compra'] = True
+    else:
+        # Promove tratamento do caso em que o registro de negociação não vem corretamente
+        # separado e o indicador de compra e venda vem junto com o valor total negociado
+        # para o item de negociação
+        elementos = indicadorCompraVenda.split(" ")
+        indicadorCompraVenda = elementos[1]
+        if indicadorCompraVenda == "C":
+            resposta['is_compra'] = False
+        elif indicadorCompraVenda == "D":
+            resposta['is_compra'] = True
+        # Inicializa o valor total negociado já que ele está disponível no array 'elementos'
+        valor_negociado = elementos[0]
+        indice_valor_negociado = len(registro_negociacao) - 2
+
+    # O valor total negociado é capturado no antepenúltimo ítem do registro de negociação
+    if valor_negociado == 0:
+        valor_negociado = registro_negociacao[len(registro_negociacao) - 3]
+        indice_valor_negociado = len(registro_negociacao) - 3
+    resposta['valor_negociado'] = float(str(valor_negociado).replace(",", "."))
+
+    # Os itens do registro de negociação referentes aos valores unitários dos ativos e da
+    # quantidade negociada é confuso. Será necessário obter os quatro últimos itens antes do
+    # índice do valor negociado capturado para realizar operações envolvendo o valor negociado
+    # e os quatro itens referenciados
+    valores_itens_unitarios = [registro_negociacao[int(indice_valor_negociado) - 4],
+                               registro_negociacao[int(indice_valor_negociado) - 3],
+                               registro_negociacao[int(indice_valor_negociado) - 2],
+                               registro_negociacao[int(indice_valor_negociado) - 1]]
+    if valores_itens_unitarios[2] == "":
+        if valores_itens_unitarios[3] != "":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        else:
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[1]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+    else:
+        if valores_itens_unitarios[1] == "":
+            if valores_itens_unitarios[3] != "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+
 
     # Tratamento do último item correspondendo à data de negociação
     resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 1]
-    resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 1]
-    if registro_negociacao[1] == "C VIST":
-        registro_negociacao[1] = "C"
-        registro_negociacao[2] = "VISTA"
-    if registro_negociacao[3] == "":
-        registro_negociacao[3] = registro_negociacao[4]
+    print(json.dumps(resposta, indent=4))
 
     return registro_negociacao
 
 
-def consultarAtivo(nomeAtivoNotaNegociacao):
+def consultarNomeAtivo(nomeAtivoNotaNegociacao):
     resposta = None
+
     if (nomeAtivoNotaNegociacao == "ENERGIAS BR"
         or nomeAtivoNotaNegociacao == "ENERGIAS B"):
         resposta = "Energias do Brasil"
-    elif nomeAtivoNotaNegociacao == "ENGIE BRASI":
+    elif (nomeAtivoNotaNegociacao == "ENGIE BRASI"
+          or nomeAtivoNotaNegociacao == "ENGIE BRASIL"):
         resposta = "Engie Brasil"
+    elif nomeAtivoNotaNegociacao == "FII MAXI REN":
+        resposta = "FII Max Renda"
+    elif nomeAtivoNotaNegociacao == "FII XP LOG":
+        resposta = "FII XP Log"
+    elif (nomeAtivoNotaNegociacao == "ITAUSA"
+          or nomeAtivoNotaNegociacao == "TAESA"
+          or nomeAtivoNotaNegociacao == "PETROBRAS"
+          or nomeAtivoNotaNegociacao == "BRADESCO"
+          or nomeAtivoNotaNegociacao == "MOVIDA"):
+        resposta = nomeAtivoNotaNegociacao.title()
+    elif nomeAtivoNotaNegociacao == "KLABIN S/A":
+        resposta = "Klabin S/A"
+    elif nomeAtivoNotaNegociacao == "FII IRIDIUM":
+        resposta = "FII Iridium Recebíveis Imobiliários"
+    elif nomeAtivoNotaNegociacao == "ISHARE SP500":
+        resposta = "iShares S&P 500 FIC de Fundo de Indice IE"
+    elif nomeAtivoNotaNegociacao == "WEG          ON N":
+        resposta = "Weg"
+    elif nomeAtivoNotaNegociacao == "ITAUSA          PN":
+        resposta = "Itausa"
+    elif nomeAtivoNotaNegociacao == "TAESA          UNT":
+        resposta = "Taesa"
+    elif (nomeAtivoNotaNegociacao == "ABC BRASIL"
+          or nomeAtivoNotaNegociacao == "ABC BRASI"):
+        resposta = "Banco ABC Brasil"
+    elif nomeAtivoNotaNegociacao == "OI":
+        resposta = "OI Brasil"
+    elif nomeAtivoNotaNegociacao == "METAL LEVE":
+        resposta = "Mahle Metal Leve"
+    elif nomeAtivoNotaNegociacao == "FII HSI MALL":
+        resposta = "FII HSI Malls"
+    elif nomeAtivoNotaNegociacao == "FII RBRALPHA":
+        resposta = "FII RBR Alpha Multiestratégia Real Estate"
 
     return resposta
 
