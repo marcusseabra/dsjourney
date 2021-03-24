@@ -22,6 +22,7 @@ def leitura_notas_negociacao():
         nomesArquivos.append(nome)
     nomesArquivos.sort()
 
+    # Configurações de tabela para leitura do pdfplumber
     table_settings = {
         "vertical_strategy": "text",
         "horizontal_strategy": "text",
@@ -34,7 +35,7 @@ def leitura_notas_negociacao():
         print("Arquivo lido: " + str(nomesArquivos[indice]))
 
         # A propriedade pages é uma lista com o total de páginas do arquivo pdf lido
-        print("\tNúmero de páginas do arquivo: " + str(len(pdf.pages)) + "\n")
+        print("\tNúmero de páginas do arquivo: " + str(len(pdf.pages)))
         for pgn in range(len(pdf.pages)):
             leitura_pagina = pdf.pages[pgn]
 
@@ -108,24 +109,80 @@ def tratar_registros_negociacao(registro_negociacao):
     # quantidade negociada é confuso. Será necessário obter os quatro últimos itens antes do
     # índice do valor negociado capturado para realizar operações envolvendo o valor negociado
     # e os quatro itens referenciados
+
     valores_itens_unitarios = [registro_negociacao[int(indice_valor_negociado) - 4],
                                registro_negociacao[int(indice_valor_negociado) - 3],
                                registro_negociacao[int(indice_valor_negociado) - 2],
                                registro_negociacao[int(indice_valor_negociado) - 1]]
-    if valores_itens_unitarios[2] == "":
-        if valores_itens_unitarios[3] != "":
-            resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+    slider_valor_unitario = 3
+    slider_quantidade = 2
+
+    if valores_itens_unitarios[slider_quantidade] == "":
+        if valores_itens_unitarios[slider_valor_unitario] != "":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
             resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
         else:
-            resposta['valor_unitario'] = float(str(valores_itens_unitarios[1]).replace(",", "."))
-            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+            slider_valor_unitario = 2
+            slider_quantidade = 1
+            if valores_itens_unitarios[slider_valor_unitario] != "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+            else:
+                slider_valor_unitario = 1
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
     else:
-        if valores_itens_unitarios[1] == "":
-            if valores_itens_unitarios[3] != "":
-                resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+        if valores_itens_unitarios[slider_valor_unitario] == "":
+            slider_valor_unitario = 2
+            slider_quantidade = 1
+            if valores_itens_unitarios[slider_quantidade] == "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        else:
+            valor_unitario_temporario = valores_itens_unitarios[slider_quantidade]
+                                            + valores_itens_unitarios[slider_valor_unitario]
+            quantidade_temporaria = valores_itens_unitarios[slider_quantidade]
+            slider_quantidade = 1
+            if valores_itens_unitarios[slider_quantidade] == "":
+                resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
                 resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
 
 
+    '''
+    else:
+        if valores_itens_unitarios[slider_valor_unitario] != "":
+            valor_concatenado = valores_itens_unitarios[slider_quantidade]
+                                    + valores_itens_unitarios[slider_valor_unitario]
+
+
+    if valores_itens_unitarios[2] == "":
+        if valores_itens_unitarios[1] == "":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        if valores_itens_unitarios[0] == "":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        if valores_itens_unitarios[3] == "":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[1]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        else:
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+    else:
+        if valores_itens_unitarios[1] == "":
+            if valores_itens_unitarios[3] == "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[2]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+            elif valores_itens_unitarios[0] == "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[3]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        if valores_itens_unitarios[0] == "":
+            if valores_itens_unitarios[3] == "":
+                resposta['valor_unitario'] = float(str(valores_itens_unitarios[2]).replace(",", "."))
+                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+        if valores_itens_unitarios[3] != "":
+            teste_valor_unitario = valores_itens_unitarios[2] + valores_itens_unitarios[3]
+    '''
     # Tratamento do último item correspondendo à data de negociação
     resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 1]
     print(json.dumps(resposta, indent=4))
