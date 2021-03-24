@@ -52,11 +52,17 @@ def leitura_notas_negociacao():
                     linhas.append(data_nota_negociacao)
                     lista_final.append(linhas)
 
-        print("\tLeitura finalizada")
+        print("\tLeitura do arquivo finalizada")
 
-    for item_negociacao in lista_final:
-        print(item_negociacao)
-        tratar_registros_negociacao(item_negociacao)
+    for registro_arquivo_pdf in lista_final:
+        print(registro_arquivo_pdf)
+
+    print("########## Dados de negociação com falhas ##########")
+    for registro_arquivo_pdf in lista_final:
+        registro_negociacao = tratar_registros_negociacao(registro_arquivo_pdf)
+        if registro_negociacao[3] is None:
+            print(registro_arquivo_pdf)
+            print(json.dumps(registro_negociacao, indent=4))
 
 
 def tratar_registros_negociacao(registro_negociacao):
@@ -145,15 +151,12 @@ def tratar_registros_negociacao(registro_negociacao):
             valor_unitario_temporario = (valores_itens_unitarios[slider_quantidade]
                                             + valores_itens_unitarios[slider_valor_unitario])
             quantidade_temporaria = valores_itens_unitarios[slider_quantidade]
-            print("Valor unitario temporario: " + str(valor_unitario_temporario))
-            print("Quantidade temporaria: " + str(quantidade_temporaria))
             slider_quantidade = 1
             if valores_itens_unitarios[slider_quantidade] == "":
                 resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
                 resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
             else:
-                calculo_quantidade = round(float(str(valor_unitario_temporario).replace(",", "."))/resposta['valor_negociado'])
-                print("Calculo quantidade: " + str(calculo_quantidade))
+                calculo_quantidade = round(resposta['valor_negociado']/float(str(valor_unitario_temporario).replace(",", ".")))
                 if calculo_quantidade == int(valores_itens_unitarios[slider_quantidade]):
                     resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
                     resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
@@ -195,7 +198,6 @@ def tratar_registros_negociacao(registro_negociacao):
     '''
     # Tratamento do último item correspondendo à data de negociação
     resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 1]
-    print(json.dumps(resposta, indent=4))
 
     return registro_negociacao
 
@@ -258,6 +260,6 @@ def obterDataNotaNegociacao(texto):
 
     return dia_mes.group()
 
-tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'MOVIDA', 'ON NM', '', '', '6', '1', '9,85', '119,10 C', '28/12'])
-#leitura_notas_negociacao()
+#tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'MOVIDA', 'ON NM', '', '', '6', '1', '9,85', '119,10 C', '28/12'])
+leitura_notas_negociacao()
 # obterDataNotaNegociacao("Texto 03/07/2020 Novo Texto")
