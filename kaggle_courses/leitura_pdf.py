@@ -132,6 +132,9 @@ def tratar_registros_negociacao(registro_negociacao):
                 resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
                 resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
     else:
+        if valores_itens_unitarios[slider_quantidade] == "0":
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
         if valores_itens_unitarios[slider_valor_unitario] == "":
             slider_valor_unitario = 2
             slider_quantidade = 1
@@ -139,14 +142,21 @@ def tratar_registros_negociacao(registro_negociacao):
                 resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
                 resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
         else:
-            valor_unitario_temporario = valores_itens_unitarios[slider_quantidade]
-                                            + valores_itens_unitarios[slider_valor_unitario]
+            valor_unitario_temporario = (valores_itens_unitarios[slider_quantidade]
+                                            + valores_itens_unitarios[slider_valor_unitario])
             quantidade_temporaria = valores_itens_unitarios[slider_quantidade]
+            print("Valor unitario temporario: " + str(valor_unitario_temporario))
+            print("Quantidade temporaria: " + str(quantidade_temporaria))
             slider_quantidade = 1
             if valores_itens_unitarios[slider_quantidade] == "":
                 resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
                 resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
-
+            else:
+                calculo_quantidade = round(float(str(valor_unitario_temporario).replace(",", "."))/resposta['valor_negociado'])
+                print("Calculo quantidade: " + str(calculo_quantidade))
+                if calculo_quantidade == int(valores_itens_unitarios[slider_quantidade]):
+                    resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
+                    resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
 
     '''
     else:
@@ -200,7 +210,7 @@ def consultarNomeAtivo(nomeAtivoNotaNegociacao):
           or nomeAtivoNotaNegociacao == "ENGIE BRASIL"):
         resposta = "Engie Brasil"
     elif nomeAtivoNotaNegociacao == "FII MAXI REN":
-        resposta = "FII Max Renda"
+        resposta = "FII Maxi Renda"
     elif nomeAtivoNotaNegociacao == "FII XP LOG":
         resposta = "FII XP Log"
     elif (nomeAtivoNotaNegociacao == "ITAUSA"
@@ -232,6 +242,10 @@ def consultarNomeAtivo(nomeAtivoNotaNegociacao):
         resposta = "FII HSI Malls"
     elif nomeAtivoNotaNegociacao == "FII RBRALPHA":
         resposta = "FII RBR Alpha Multiestratégia Real Estate"
+    elif nomeAtivoNotaNegociacao == "FII CSHG URB":
+        resposta = "FII CSHG Renda Urbana"
+    elif nomeAtivoNotaNegociacao == "FII VINCILOG":
+        resposta = "fii Vinci Logistica"
 
     return resposta
 
@@ -244,6 +258,6 @@ def obterDataNotaNegociacao(texto):
 
     return dia_mes.group()
 
-
-leitura_notas_negociacao()
+tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'MOVIDA', 'ON NM', '', '', '6', '1', '9,85', '119,10 C', '28/12'])
+#leitura_notas_negociacao()
 # obterDataNotaNegociacao("Texto 03/07/2020 Novo Texto")
