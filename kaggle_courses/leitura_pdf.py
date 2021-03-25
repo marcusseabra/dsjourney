@@ -17,6 +17,7 @@ DATADIR_DESTINO = '/home/seabra/Documentos/IR_2021/output/'
 def leitura_notas_negociacao():
     nomesArquivos = []
     lista_final = []
+
     # Lista arquivos de uma pasta
     for nome in os.listdir(DATADIR):
         nomesArquivos.append(nome)
@@ -64,6 +65,17 @@ def leitura_notas_negociacao():
             print(registro_arquivo_pdf)
             print(json.dumps(registro_negociacao, indent=4))
 
+
+def emitir_lista_patrimonio(parametro):
+    # Percorre parametro
+    # Se item do parâmetro não está no array final
+    # Inclui no array
+    # Se estiver, verifica se é compra ou venda
+    # Se for compra, adiciona ao item a quantidade
+    # Se for venda, adiciona oo item a quantidade
+    # Imprimir resultado
+    # Alertar se houver valores negativos para a quantidade
+    print("########## Listagem de bens e direitos para declaracao IR ##########")
 
 def tratar_registros_negociacao(registro_negociacao):
     resposta = {"ativo": None,
