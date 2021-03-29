@@ -58,24 +58,53 @@ def leitura_notas_negociacao():
     for registro_arquivo_pdf in lista_final:
         print(registro_arquivo_pdf)
 
-    print("########## Dados de negociação com falhas ##########")
+    lista_registros_negociacoes = []
     for registro_arquivo_pdf in lista_final:
         registro_negociacao = tratar_registros_negociacao(registro_arquivo_pdf)
-        if registro_negociacao[3] is None:
+        lista_registros_negociacoes.append(registro_negociacao)
+        #print(registro_arquivo_pdf)
+        #print(json.dumps(registro_negociacao, indent=4))
+        if registro_negociacao["quantidade"] is None:
+            print("Registro de negociacao incorreto: ")
             print(registro_arquivo_pdf)
             print(json.dumps(registro_negociacao, indent=4))
 
+    emitir_lista_patrimonio(lista_registros_negociacoes)
 
-def emitir_lista_patrimonio(parametro):
-    # Percorre parametro
-    # Se item do parâmetro não está no array final
-    # Inclui no array
-    # Se estiver, verifica se é compra ou venda
-    # Se for compra, adiciona ao item a quantidade
-    # Se for venda, adiciona oo item a quantidade
-    # Imprimir resultado
-    # Alertar se houver valores negativos para a quantidade
+
+def emitir_lista_patrimonio(lista_registros_negociacoes):
+    lista_patrimonio = []
+    for registro_negociacao in lista_registros_negociacoes:
+        is_patrimonio = False
+        i = 0
+        for item_patrimonio in lista_patrimonio:
+            if(item_patrimonio["ativo"] == registro_negociacao["ativo"]):
+                is_patrimonio = True
+                if(registro_negociacao["is_compra"]):
+                    item_patrimonio["quantidade"] = (item_patrimonio["quantidade"]
+                                                     + registro_negociacao["quantidade"])
+                else:
+                    # print(json.dumps(item_patrimonio, indent=4))
+                    item_patrimonio["quantidade"] = (item_patrimonio["quantidade"]
+                                                     - registro_negociacao["quantidade"])
+                lista_patrimonio[i] = item_patrimonio
+                break
+            i = i + 1
+        if not(is_patrimonio):
+            if not (registro_negociacao["is_compra"]):
+                registro_negociacao["quantidade"] = -1*registro_negociacao["quantidade"]
+            lista_patrimonio.append(registro_negociacao)
+
     print("########## Listagem de bens e direitos para declaracao IR ##########")
+    for item_patrimonio in lista_patrimonio:
+        if (item_patrimonio["ativo"] is not None
+            and item_patrimonio["quantidade"] is not None):
+            print("Ativo: "
+                  + item_patrimonio["ativo"]
+                  + " - Quantidade: "
+                  + str(item_patrimonio["quantidade"]))
+        else:
+            print(json.dumps(item_patrimonio, indent=4))
 
 def tratar_registros_negociacao(registro_negociacao):
     resposta = {"ativo": None,
@@ -84,6 +113,7 @@ def tratar_registros_negociacao(registro_negociacao):
                 "valor_unitario": None,
                 "valor_negociado": None,
                 "data_negociacao": None,
+                "preco_medio": None,
                 "is_compra": True}
     valor_negociado = 0
 
@@ -156,22 +186,13 @@ def tratar_registros_negociacao(registro_negociacao):
         if valores_itens_unitarios[slider_valor_unitario] == "":
             slider_valor_unitario = 2
             slider_quantidade = 1
-            if valores_itens_unitarios[slider_quantidade] == "":
-                resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
-                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+            resposta['valor_unitario'] = float(str(valores_itens_unitarios[slider_valor_unitario]).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
         else:
             valor_unitario_temporario = (valores_itens_unitarios[slider_quantidade]
                                             + valores_itens_unitarios[slider_valor_unitario])
-            quantidade_temporaria = valores_itens_unitarios[slider_quantidade]
-            slider_quantidade = 1
-            if valores_itens_unitarios[slider_quantidade] == "":
-                resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
-                resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
-            else:
-                calculo_quantidade = round(resposta['valor_negociado']/float(str(valor_unitario_temporario).replace(",", ".")))
-                if calculo_quantidade == int(valores_itens_unitarios[slider_quantidade]):
-                    resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
-                    resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
+            resposta['valor_unitario'] = float(str(valor_unitario_temporario).replace(",", "."))
+            resposta['quantidade'] = round(resposta['valor_negociado']/resposta['valor_unitario'])
 
     '''
     else:
@@ -210,8 +231,22 @@ def tratar_registros_negociacao(registro_negociacao):
     '''
     # Tratamento do último item correspondendo à data de negociação
     resposta['data_negociacao'] = registro_negociacao[len(registro_negociacao) - 1]
+    #print(registro_negociacao)
+    #print(json.dumps(resposta, indent=4))
 
-    return registro_negociacao
+    print(resposta['data_negociacao']
+          + "\t"
+          + resposta['ativo']
+          + "\t"
+          + str(resposta['is_compra'])
+          + "\t"
+          + str(resposta['valor_unitario'])
+          + "\t"
+          + str(resposta['quantidade'])
+          + "\t"
+          + str(resposta['valor_negociado']))
+
+    return resposta
 
 
 def consultarNomeAtivo(nomeAtivoNotaNegociacao):
@@ -233,6 +268,8 @@ def consultarNomeAtivo(nomeAtivoNotaNegociacao):
           or nomeAtivoNotaNegociacao == "BRADESCO"
           or nomeAtivoNotaNegociacao == "MOVIDA"):
         resposta = nomeAtivoNotaNegociacao.title()
+    elif nomeAtivoNotaNegociacao == "PETROBRA":
+        resposta = "Petrobras"
     elif nomeAtivoNotaNegociacao == "KLABIN S/A":
         resposta = "Klabin S/A"
     elif nomeAtivoNotaNegociacao == "FII IRIDIUM":
@@ -272,6 +309,6 @@ def obterDataNotaNegociacao(texto):
 
     return dia_mes.group()
 
-#tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'MOVIDA', 'ON NM', '', '', '6', '1', '9,85', '119,10 C', '28/12'])
+#tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'ABC BRASI', 'L          PN N2', '', '', '30', '1', '4,93', '447,90 C', '11/12'])
 leitura_notas_negociacao()
 # obterDataNotaNegociacao("Texto 03/07/2020 Novo Texto")
