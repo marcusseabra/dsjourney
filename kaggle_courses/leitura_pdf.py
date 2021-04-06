@@ -114,7 +114,8 @@ def tratar_registros_negociacao(registro_negociacao):
                 "valor_negociado": None,
                 "data_negociacao": None,
                 "preco_medio": None,
-                "is_compra": True}
+                "is_compra": True
+                "negociacoes": []}
     valor_negociado = 0
 
     # O ativo negociado pode estar no quarto ou no quinto ou no sexto item

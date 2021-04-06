@@ -1,3 +1,46 @@
+Atribuição de Performance #################################################################################################################
+Para a realização dessa análise, calculamos a rentabilidade da ação a cada dia multiplicada pela quantia nela alocada. Para o exercício, consideramos uma alocação inicial de R$ 1.000 realizada em 28 de fevereiro de 2018, dividida igualmente para as ações presentes no portfólio na época – estas sendo Itaú (ITUB4), B2W (BTOW3) e B3 (B3SA3). Dessa forma, verificamos, a cada dia, o ganho financeiro de cada ação
+Para analisar o desempenho do período cheio, realizamos a soma do ganho financeiro diário para cada ação, verificando, assim, qual foi seu ganho no período – por exemplo, para o período de fev/18 até fev/21, a Localiza (RENT3) gerou um lucro de R$ 129,69, enquanto a Rumo (RAIL3) trouxe um lucro de R$ 36,82. Somando os rendimentos totais de cada ação da Carteira, verifica-se a obtenção de um retorno de R$ 695,28. Como o investimento inicial foi de R$ 1.000, essa rentabilidade foi de 69,53%
+Quando multiplicamos a participação financeira (exemplo: R$ 129,69 de RENT3 sobre R$ 695,28 = R$ 129,69 / R$ 695,28 = 18,7%) pela rentabilidade do portfólio (69,53%) nós conseguimos obter a contribuição de cada ação para a Carteira completa – no exemplo, temos 18,7% de RENT3 multiplicado por 69,53%, o que resulta em uma contribuição de 12,97%
+
+Rumo Logística ############################################################################################################################
+[06/2018] A Rumo Logística é maior operadora com base ferroviária independente da América Latina. A Rumo é uma empresa de alto crescimento, conhecida pelo turnaround operacional. Possui uma malha ferroviária com aproximadamente 12.000 quilômetros de extensão, onde estão localizados quatro dos portos mais ativos do Brasil, que são responsáveis por 80% de todas as exportações de grãos (soja e milho) do Brasil
+[06/2018] As operações ferroviárias da Rumo são distribuídas em quatro concessões: 1) Malha Sul, com 7.208 km; 2) Malha paulista, com 2.039 km; 3) Malha Oeste, com 1.951 km e; 4) Malha Norte, com 735 km
+[06/2018] Estima-se que o volume transportado de grãos pela Rumo tenha crescimento médio de 10% ao ano de 2017 a 2020. No longo prazo, o crescimento esperado do volume transportado é de 3% ao ano
+[06/2018] Os investimentos totalizaram R$ 5,1 bilhões desde 2015 até 2017. A empresa tem plano de investir mais R$ 4,8 bilhões de 2018 até 2020. Eles possibilitaram a melhoria da eficiência, execução e controle dos custos com foco no controle do consumo de combustível e a gestão de fornecedores
+[06/2018] As justificativas do investimento são: crescimento da produção de grãos do Brasil; crescimento da receita da Rumo devido ao aumento do volume transportado; aumento da rentabilidade (margem EBITDA); redução do endividamento; geração de caixa a partir de 2019
+[06/2018] O volume total transportado pela Rumo foi de 49,7 bilhões de toneladas por quilometro útil (TKU) em 2017, um crescimento de 23% em relação a 2016. A distribuição dos produtos: produtos agrícolas com 83% (soja com 41%, milho com 33% e açúcar com 8%) e produtos industriais com 17%, comparado a 81% e 19% em 2016, respectivamente
+[06/2018] No primeiro trimestre de 2018, a Rumo teve participação de mercado de 48% no transporte de grãos até o Porto de Santos (SP)
+[06/2018] As ferrovias representam 25% das cargas transportadas no Brasil apesar da dimensão continental do país
+[06/2018] O guidance de longo prazo para o volume transportado até 2020 é crescimento médio composto anual (CAGR) de 12%, saindo de um volume de 55-57 bilhões de TKU’s em 2018 para 69-71 bilhões de TKU’s em 2020
+[06/2018] A projeção de EBITDA de longo prazo estima crescimento médio composto anual (CAGR) de 20%, saindo de R$ 3,05-3,25 bilhões de EBITDA em 2018 para R$ 4,4-4,6 bilhões em 2020
+[06/2018] Em termos de investimentos (capex), a previsão de investimentos é a seguinte: R$ 1,9-2,1 bilhões em 2018, R$ 1,5-1,8 bilhão em 2019 e R$ 1,0-1,3 bilhão em 2020. O total de investimentos no triênio 18/19/20 é de R$ 4,8 bilhões, na faixa média do guidance
+[4T20] Pavimentação completa da rodovia BR-163, uma das mais importantes do País, que liga a região produtora de grãos no MT aos portos da região norte, favorecendo o serviço de frete rodoviário por lá pela primeira vez na história
+[4T20] Houve maior volume transportado de produtos, alcançando mais um recorde para a empresa com 16,2 bilhões de TKU (toneladas úteis por quilômetro) no 4T20 (crescimento de 8% em relação a 4T19) e 62,5 bilhões de TKU em 2020, um crescimento de 3,9% ante 2019 
+[4T20] Indicadores de consumo de diesel por quilômetro, taxa de acidentes ferroviários e taxa de acidentes pessoais reduzindo em 5,3%, 17,1% e 40%, respectivamente, em 2020, comparando com o ano de 2019. Tratam-se de redução de custos que afetam as margens da empresa
+[4T20] Queda relevante do frete ferroviário no 4T20 de 16,9% em relação a 4T19 na operação Norte (Mato Grosso a São Paulo), a de maior fluxo para a companhia, chegando a R$ 80,6 por mil TKU no trimestre, o menor patamar em, pelo menos, 7 anos, contribuindo para a piora das margens
+[4T20] O Ebitda (resultado operacional da companhia ajustado pela depreciação e amortização) no 4T20 apresentou queda de 15,6% em relação ao de 4T19, ficando em R$ 758 milhões e com margem de 45,6%, ante 53,9% no 4T19. No consolidado do ano, o Ebitda foi de R$ 3,7 bilhões (margem de 52,6%), ante R$ 3,829 bilhões de 2019 (margem de 54%)
+[4T20] Houve maior mix de produtos de menor margem, como açúcar e fertilizantes, na parcela total de produtos transportados, impactando nos custos totais e na queda de receita, além de maiores despesas administrativas e com segurança da informação
+[4T20] Um componente adicional que favorece as perspectivas para a companhia é o início das operações da Malha Central, que liga os polos produtores agrícolas de Goiás e uma parte da região MATOPIBA (Maranhão, Tocantins, Piauí e Bahia) com as malhas principais do sudeste
+[4T20] A Malha Paulista encontra-se em fase de expansão e de melhorias, já a Malha Central iniciará as suas operações em 2021, tornando-se mais uma fonte de crescimento de receita, além do próprio volume de produtos agrícolas projetado para este ano, apresentando-se como elementos importantes que podem impulsionar os resultados da companhia
+
+O crescimento de receita está vinculado tanto à capacidade de aumento da produção agrícola brasileira quanto ao ganho de mercado frente ao modal rodoviário
+O transporte de grãos possui margens maiores do que o transporte de açúcar e fertilizantes
+Trata-se de negócio intensivo de Capex. Outro fator que tende a reduzir os lucros e o caixa
+As mudanças regulatórias/contratuais quanto às concessões é um risco a ser monitorado considerando as instabilidades política e jurídica brasileiras
+Aumento do combustível usado nas locomotivas é prejudicial para margens, porém melhora o ambiente competitivo para o transporte ferroviário, compensando, em partes, a competição “desleal” da nova BR-163 (ainda sem tarifa de pedágio) que liga o Mato Grosso a São Paulo
+
+Múltiplo EV/Ebitda ########################################################################################################################
+O EV é valor da empresa, do inglês enterprise value, que é calculado pela soma do valor de mercado (em R$) da empresa na Bolsa de Valores, mais o saldo do endividamento líquido da empresa (em R$) do último balanço disponível
+O endividamento líquido é calculado pelo endividamento bruto menos o saldo de caixa e aplicações financeiras
+O EBITDA é o resultado operacional antes dos juros, depreciação e amortização anual (ou últimos 12 meses) divulgado pela empresa. Também pode se utilizar o EBITDA projetado no futuro 12 meses
+O múltiplo EV/EBITDA permite uma comparação entre diferentes empresas em setores distintos
+Deve-se sempre comparar o resultado com a média histórica da ação em questão. No caso de Rumo, a média do múltiplo EV/EBITDA 12 meses é de 11,1x desde março de 2017. Portanto, atualmente as ações da Rumo estão sendo negociadas 30% abaixo da sua média histórica, ou seja, podem ser consideradas baratas
+
+
+
+
+
 Modelo de Gordon ##########################################################################################################################
 Avaliar aula 8 em que o Modelo de Gordon foi apresentado
 
