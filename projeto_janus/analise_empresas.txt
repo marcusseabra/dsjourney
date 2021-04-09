@@ -1,7 +1,34 @@
+Precificação de ativos segundo modelo de fatores de Eugene Fama (five-factor asset pricing model) #########################################
+Artigo Eugene Fama
+
+O ganho esperado em um ativo está relacionado ao indicador preço sobre valor patrimonial e as expectativas futuras de lucros e investimentos
+
+
 Atribuição de Performance #################################################################################################################
 Para a realização dessa análise, calculamos a rentabilidade da ação a cada dia multiplicada pela quantia nela alocada. Para o exercício, consideramos uma alocação inicial de R$ 1.000 realizada em 28 de fevereiro de 2018, dividida igualmente para as ações presentes no portfólio na época – estas sendo Itaú (ITUB4), B2W (BTOW3) e B3 (B3SA3). Dessa forma, verificamos, a cada dia, o ganho financeiro de cada ação
 Para analisar o desempenho do período cheio, realizamos a soma do ganho financeiro diário para cada ação, verificando, assim, qual foi seu ganho no período – por exemplo, para o período de fev/18 até fev/21, a Localiza (RENT3) gerou um lucro de R$ 129,69, enquanto a Rumo (RAIL3) trouxe um lucro de R$ 36,82. Somando os rendimentos totais de cada ação da Carteira, verifica-se a obtenção de um retorno de R$ 695,28. Como o investimento inicial foi de R$ 1.000, essa rentabilidade foi de 69,53%
 Quando multiplicamos a participação financeira (exemplo: R$ 129,69 de RENT3 sobre R$ 695,28 = R$ 129,69 / R$ 695,28 = 18,7%) pela rentabilidade do portfólio (69,53%) nós conseguimos obter a contribuição de cada ação para a Carteira completa – no exemplo, temos 18,7% de RENT3 multiplicado por 69,53%, o que resulta em uma contribuição de 12,97%
+
+Quando se desfazer de um ativo ############################################################################################################
+Custo de oportunidade. Há uma ideia melhor em um sentido de investimento diverso do atual
+Valuation. O ativo atual possui baixa margem de segurança tornando inviável novas alocações e continuidade do investimento
+Perda de fundamentos da tese de investimanto
+
+Energias do Brasil ########################################################################################################################
+Atualmente, a empresa possui uma RAP (Receita Anual Permitida) de R$ 50,9 milhões. Possui ativos em construção que farão com que essa RAP passe para aproximadamente R$ 500 milhões nos próximos anos.
+Segundo a Energias do Brasil, o seu EBITDA deve evoluir em um CAGR de 10% a 12% até 2023 com os novos projetos. Isso implicará que  a participação no segmento de transmissão no EBITDA passe de aproximadamente 10,5% (em 2020) para cerca de 22%
+No segmento de Transmissão, a empresa conta com um total de 1.554 Km em linhas com concessões para vencimento médio em 2047, com 316 Km já em operação (duas obras entregues antes do prazo da Agência Nacional de Energia Elétrica) e 1.238 Km ainda em construção
+Os projetos de Transmissão serão os principais responsáveis pela evolução dos resultados da companhia nos próximos anos, permitindo um aumento na capacidade de distribuição de proventos aos acionistas
+No segmento de Geração, a empresa possui operações hidrelétricas, térmicas e de geração distribuída (solar), com três das suas seis usinas hidrelétricas figurando entre as 15 melhores do Brasil
+A empresa também atua no Mercado Livre de energia, comercializando uma parcela significativa da sua energia gerada e figurando entre as cinco maiores comercializadoras do país (3o lugar com 4% do market share)
+A Energias do Brasil já deixou claro o seu planejamento de zerar a utilização de carvão em sua matriz energética até 2030 (usina termelétrica de Pecém. vai demandar um CAPEX estimado de mais de R$ 150 bilhões (24 bilhões de euros anunciados pela companhia) durante operíodo, visando um aumento da capacidade instalada de energia solar (atualmente em 0,1 GW) e outras renováveis rumo ao status de carbono neutro – colocado como alvo
+A companhia garantiu uma distribuição mínima de, pelo menos, R$ 1,00 por ação ao ano, podendo ser mais, a depender dos investimentos e da geração de caixa 
+Em relação ao EBITDA ajustado projetado para os próximos anos, se utilizarmos a faixa média do CAGR mencionado pela companhia, de 11% entre 2019 e 2023, chegamos em um EBITDA ajustado de R$ 3,43 bilhões ao final do período
+
+Valuation :: preço-teto de R$ 25,00
+
+O setor de energia elétrica – por sua previsibilidade em geração de receitas – possui amplo acesso a capital com custos de captação mais baixos do que a média de outros setores da bolsa
+Os ativos de Transmissão de energia elétrica têm a característica de apresentar uma alta margem EBITDA, pois a maior parcela de dispêndio de capital é realizada no momento da construção do ativo. Quando os ativos são finalizados, a empresa detentora é remunerada pela disponibilidade das linhas de Transmissão, com a necessidade de uma menor parcela de despesas
 
 Rumo Logística ############################################################################################################################
 [06/2018] A Rumo Logística é maior operadora com base ferroviária independente da América Latina. A Rumo é uma empresa de alto crescimento, conhecida pelo turnaround operacional. Possui uma malha ferroviária com aproximadamente 12.000 quilômetros de extensão, onde estão localizados quatro dos portos mais ativos do Brasil, que são responsáveis por 80% de todas as exportações de grãos (soja e milho) do Brasil
@@ -253,13 +280,16 @@ Curso de valuation: http://www.contabilidademq.com.br/2019/05/curso-completo-de-
 ############################################################################################################################
 ############################################################################################################################		
 ############################################################################################################################
+
 chupada: 
 	https://pt.pornhub.com/view_video.php?viewkey=ph5f46f6e40467b
 	https://pt.pornhub.com/view_video.php?viewkey=ph5c23a657c245b
 ela está de volta: 
+	https://www.pornhub.com/view_video.php?viewkey=ph5afb0b38d50d0
 	https://pt.pornhub.com/view_video.php?viewkey=ph5be80f7a25975
 	https://pt.pornhub.com/view_video.php?viewkey=ph5bf64cae30af1
 https://pt.pornhub.com/view_video.php?viewkey=ph604f7ccc4df2e
+https://pt.pornhub.com/view_video.php?viewkey=ph5b75ae27f2cfa
 https://pt.pornhub.com/view_video.php?viewkey=ph5ca1561b32cc5
 https://www.pornhub.com/view_video.php?viewkey=ph5ec891151926d
 https://www.pornhub.com/view_video.php?viewkey=ph5ec973016fb60
