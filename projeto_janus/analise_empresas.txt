@@ -1,42 +1,3 @@
-Nova relação de consumo ###################################################################################################################
-Proprietário assumiria contrato de inquilino (?)
-:: Como identificar o proprietário e indicar no contrato?
-No GSANAC, deve ser identificado proprietário/inquilino para que haja contrato assinado da pessoa devida
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Weg #######################################################################################################################################
 [4T20] Receita Operacional Líquida (ROL) :: R$ 4.889,9 milhões (29,4% superior ao 4T19 e 1,8% superior ao 3T20)
 [4T20] EBITDA :: R$ 981,0 milhões. 47,2% superior ao 4T19 e 4,9% superior ao 3T20
@@ -74,6 +35,19 @@ Quando se desfazer de um ativo #################################################
 Custo de oportunidade. Há uma ideia melhor em um sentido de investimento diverso do atual
 Valuation. O ativo atual possui baixa margem de segurança tornando inviável novas alocações e continuidade do investimento
 Perda de fundamentos da tese de investimanto
+
+Hypera ####################################################################################################################################
+Para famílias com membros entre 10 e 19 anos e entre 20 e 29 anos, o gasto com medicamentos é em média de R$ 119,6. Com família com membros de 60 a 69 anos e com 70 anos ou mais, o gasto com medicamentos gira em torno de R$ 453,3
+Entre as marcas power brands (mais de R$ 100 milhões de sell-out - diretamente ao cliente final) podem ser citadas: Zero Cal, Epocler, Benegrip, Neosaldina, PredSim, Rinossoro, Neosoro, Torsilax, Dramin, Alivium
+Houve investimento de 9% em Pesquisa e Desenvolvimento propiciando o lançamento de 90 produtos
+A empresa pretende investir no mercado institucional (tratamentos crônicos) que envolve hospitais, clínicas, postos de saúde de natureza pública ou privada
+No mercado institucional, a Hypera detém 1,7% de receitas ligadas ao setor e deseja ter entre 5% e 7% nos próximos cinco anos
+Guidance :: +44% de Receita líquida em relação a 2020
+Guidance :: +54% de Ebitda Ajustado em relação a 2020
+Guidance :: +14% de lucro líquido em relação a 2020
+
+
+O que seriam projetos de "extensão de categoria"?
 
 Energias do Brasil ########################################################################################################################
 Atualmente, a empresa possui uma RAP (Receita Anual Permitida) de R$ 50,9 milhões. Possui ativos em construção que farão com que essa RAP passe para aproximadamente R$ 500 milhões nos próximos anos.
