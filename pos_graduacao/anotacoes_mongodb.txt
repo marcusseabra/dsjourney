@@ -13,10 +13,11 @@ Para conectar, seguir os seguintes passos:
 	1) Clicar no botão "connect" no Atlas
 	2) Indicar que possui o mongo shell instalado e copiar o endereço para a linha de comando linux
 		Ex.: mongo "mongodb+srv://sandbox.bteig.mongodb.net/myFirstDatabase" --username m001-student
+		mongo "mongodb+srv://sandbox.bteig.mongodb.net" --username m001-student
 	3) Informar usuário e senha
 	4) Uma outra forma de conexão seria: mongodb+srv://usuario:senha@URI_cluster_atlas.mongodb.net/[nome_base_dados] (entre [] é parâmetro opcional)
 		Ex.: mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net"
-			  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supllies"
+			  mongo "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies"
 	
 No MongoDB, os dados são armazenados no formato BSON, a representação binária do formato JSON, que propicia otimização em termos de uso de espaço em disco, velocidade de leitura e flexibilidade. O intuito é melhorar a performance que seria muito prejudicada com se o formato JSON fosse usado diretamente.
 	:: Aquilo que pode ser representado por um JSON pode ser armazenado nativamente no MongoDB
@@ -30,11 +31,20 @@ Importanto e exportando dados
 		:: Utilizando BSON :: mongodump --uri "<uri do cluster Atlas>/nome_base_dados"
 			Ex.: mongodump --uri "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies"
 		:: Utilizando JSON :: mongoexport --uri "<uri do cluster Atlas>/nome_base_dados" --collection=<nome da coleção> --out <nome do arquivo>.json
-			Ex.: mongoexport --uri "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies" --collection sample --out m001_sale.json
+			Ex.: mongoexport --uri "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies" --collection=sales --out=m001_sale.json
 	:: Importação de dados
 		:: Utilizando BSON :: mongorestore --uri "<uri do cluster Atlas>/nome_base_dados" --drop dump
 		:: Utilizando JSON :: mongoimport --uri "<uri do cluster Atlas>/nome_base_dados" --drop <nome do arquivo>.json 
 	:: Documentação sobre importação e exportação: https://docs.mongodb.com/database-tools
+	
+	mongodump --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies"
+
+mongoexport --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.bteig.mongodb.net/sample_supplies" --collection=sales --out=sales.json
+
+mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies"  --drop dump
+
+mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop sales.json
+
 	
 Comandos básicos
 	:: show dbs
