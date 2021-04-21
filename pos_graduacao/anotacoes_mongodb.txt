@@ -1,3 +1,4 @@
+Banco de dados :: Propicia forma estruturada de guardar e acessar dados
 MongoDB é um banco de dados NoSQL baseado em documentos
 Um documento é uma forma estruturada de organizar os dados em um conjunto de campos-valores
 Uma coleção é a estrutura de documentos organizados no MongoDB. Geralmente, os documentos possuem a mesma estrutura campos-valores
@@ -23,6 +24,9 @@ No MongoDB, os dados são armazenados no formato BSON, a representação binári
 	:: Aquilo que pode ser representado por um JSON pode ser armazenado nativamente no MongoDB
 	:: JSON (JavaScript Object Notation) -> padrão para intercâmbio de dados na web
 	:: O formato BSON permite o uso de tipos de dados não suportados no formato JSON como os tipos de dados data e binários
+
+SELECT * FROM ATENDIMENTOPUBLICO.REGISTRO_ATENDIMENTO WHERE RGAT_ID = 56144606;
+SELECT cbdo_id FROM ATENDIMENTOPUBLICO.ORDEM_SERVICO WHERE RGAT_ID = 56144606;
 
 Importanto e exportando dados
 	:: Utilizando BSON -> mongodump e mongorestore

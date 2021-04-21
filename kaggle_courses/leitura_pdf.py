@@ -310,6 +310,6 @@ def obterDataNotaNegociacao(texto):
 
     return dia_mes.group()
 
-#tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', 'ABC BRASI', 'L          PN N2', '', '', '30', '1', '4,93', '447,90 C', '11/12'])
-leitura_notas_negociacao()
+tratar_registros_negociacao(['1-BOVESPA', 'V', 'FRACIONARIO', '', 'MOVIDA          ON N', 'M', '', '', '15', '', '', '19,32', '289,80 C', '09/02'])
+#leitura_notas_negociacao()
 # obterDataNotaNegociacao("Texto 03/07/2020 Novo Texto")
