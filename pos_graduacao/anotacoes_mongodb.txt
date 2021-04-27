@@ -64,6 +64,7 @@ Comandos básicos
 		:: Útil para avaliar a estrutura de um documento
 	
 Sobre o tipo ObjectId() que é o tipo de dado dos campos _id presente em todos os documentos do MongoDB
+	:: Documentação: https://docs.mongodb.com/manual/reference/method/ObjectId/#objectid
 
 Comandos básicos - CRUD
 	:: Manual Mongodb: https://docs.mongodb.com/manual/tutorial/query-documents/
