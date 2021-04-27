@@ -1,3 +1,18 @@
+Anotações Linux ############################################################################################################################
+
+Ajustando o classpath ----------------------------------------------------------------------------------------------------------------------
+
+Limpando: 			export CLASSPATH=
+Especificando: 	export CLASSPATH=/caminho_jar/nome_jar.jar:/caminho_outro_jar/nome_outro_jar.jar
+	Ex.:				export CLASSPATH=/home/seabra/dev/axis/axis-1_4/lib/axis.jar:/home/seabra/dev/axis/axis-1_4/lib/jaxrpc.jar
+						export CLASSPATH=/home/seabra/dev/axis/axis-1_4/lib/saaj.jar:/home/seabra/dev/axis/axis-1_4/lib/commons-logging-1.0.4.jar
+Visualizando: 		echo $CLASSPATH
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+############################################################################################################################################
+
 CODETOWIN20
 Sobre unsupervised learning: Hands-On Unsupervised Learning Using Python
 
