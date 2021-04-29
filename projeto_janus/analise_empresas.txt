@@ -89,17 +89,50 @@ Weg ############################################################################
 [4T20] Margem EBITDA :: 20,1%. 2,5 pontos percentuais maior do que no 4T19 e 0,6 ponto percentual maior do que o trimestre anterior
 [4T20] Retorno Sobre o Capital Investido (ROIC) :: 25,5%. Crescimento de 5,3 pontos percentuais em relação ao 4T19 e crescimento de 2,2 pontos percentuais em relação ao 3T20
 [4T20] A administração ressalta a melhora da atividade econômica e isto vem sendo positivo para manter elevada a demanda por produtos e soluções da Weg
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Representa 52,2% da receita operacional líquida
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Mercado interno: R$ 912.650 Mi (+14,8 em relação ao 3T20; +59% em relação ao 4T19)
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Mercado externo: R$ 1.641.303 Bi (-2,2 em relação ao 3T20; +19,1% em relação ao 4T19)  
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. 
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. 
-[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. 
+[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais :: Representa 52,2% da receita operacional líquida
+[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Mercado interno :: R$ 912.650 Mi (+14,8 em relação ao 3T20; +59% em relação ao 4T19)
+[4T20] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Mercado externo :: R$ 1.641.303 Bi (-2,2 em relação ao 3T20; +19,1% em relação ao 4T19)  
 [4T20] 
 [4T20] 
 [4T20] 
 [4T20] 
 [4T20] 
+[4T20] 
+[4T20] 
+[4T20] 
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais ::  Representa 49,7% da receita operacional líquida
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais - Mercado interno :: R$ 900.493 Mi (-1,3 em relação ao 4T20; +49,9% em relação ao 1T20)
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais - Mercado interno :: Boa demanda pelos produtos de ciclo curto em segmentos como mineração e infraestrutura. A empresa destaca ganho de mercado para os motores elétricos para acionamento de bombas e equipamentos seriados de automação
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais - Mercado externo :: R$ 1.620.332 Bi (-1,3 em relação ao 4T20; +23,9% em relação ao 1T20)
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais - Mercado externo :: Houve aumento no volume de cotações para equipamentos de ciclo longo e, ao final do trimestre, uma melhora na entrada de pedidos de projetos. Tratam-se de sinais de recuperação da atividade industrial e já são observados em segmentos importantes como mineração, óleo e gás, água e saneamento e papel e celulose
+[1T21] Linha de negócio :: Equipamentos Eletroeletrônicos Industriais. Mercado externo :: Para os equipamentos de ciclo curto, a empresa constata continuidade da recuperação gradual da atividade industrial nas principais regiões, mas em algumas regiões ainda não se atingiu volume de negócios similares ao período pré-crise
+[1T21] Linha de negócio :: Geração, Transmissão e Distribuição de Energia (GTD) :: Representa 34,1% da receita operacional líquida
+[1T21] Linha de negócio :: Geração, Transmissão e Distribuição de Energia (GTD) - Mercado interno :: R$ 974.275 Mi (+11,7% em relação ao 4T20; 24,2% em relação ao 1T20)
+[1T21] Linha de negócio :: Geração, Transmissão e Distribuição de Energia (GTD) - Mercado externo :: R$ 757.391 Mi (+3,4% em relação ao 4T20; 42,9% em relação ao 1T20)
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+[1T21] 
+ 
+
 
 Linhas de receita de ciclo curto: Motores Comerciais e Appliance e Tintas e Vernizes
 Linhas de receita de ciclo longo: Equipamentos Eletroeletrônicos Industriais e Geração, Transmissão e Distribuição de Energia (GTD)
