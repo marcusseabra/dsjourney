@@ -71,13 +71,18 @@ Comandos básicos - CRUD
 	:: db.<nome_coleção>.insert({JSON})
 	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}])
 	:: db.<nome_coleção>.insert([{JSON_1}, {JSON_2},..., {JSON_X}], { "ordered": false })
+
 	:: db.<nome_coleção>.updateOne({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
-		:: Atualiza apenas uma ocorrência que satisfaça ao critério de pesquisa
-		:: Ex.: db.grades.updateOne( {"student_id": 250, "class_id": 339}, {"$push" :  {"scores" : {"type": "extra_credit", "score": 100}} })
+		>> Atualiza apenas uma ocorrência que satisfaça ao critério de pesquisa
+		>> Ex.: db.grades.updateOne( {"student_id": 250, "class_id": 339}, {"$push" :  {"scores" : {"type": "extra_credit", "score": 100}} })
+
 	:: db.<nome_coleção>.updateMany({query}, {<operator1>: { <field1>: <value1>, ... }, <operator2>: { <field2>: <value2>, ... }, ...})
-		:: Atualiza todas as ocorrências que satisfaçam ao critério de pesquisa
-		:: Ex.: db.zips.updateMany({"city" : "HUDSON"}, {"$inc" : {"pop" : 10}})
-		:: Ex.: db.zips.updateMany({"zip" : "12534"}, {"$set" : {"pop" : 17630}})
+		>> Atualiza todas as ocorrências que satisfaçam ao critério de pesquisa
+		>> Ex.: db.zips.updateMany({"city" : "HUDSON"}, {"$inc" : {"pop" : 10}})
+		>> Ex.: db.zips.updateMany({"zip" : "12534"}, {"$set" : {"pop" : 17630}})
+		>> Ex.: db.zips.updateMany({"city":"CHELSEA", "state":"MI"}, {"$set":{"pop":5331}})
+		>> Ex.: db.grades.updateOne({"class_id":460, "student_id":1094}, {"$push":{"scores":{"type":"extra credit","score":100}}})
+
 	:: Operadores MQL: https://docs.mongodb.com/manual/reference/operator/update/#id1
 	
 Validação de esquema
@@ -156,7 +161,7 @@ Deleting Documents and Collections
 
 
 
-
+https://pt.pornhub.com/view_video.php?viewkey=ph5ee439093aae1
 
 
 
